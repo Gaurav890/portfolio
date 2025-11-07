@@ -20,7 +20,7 @@ export const projects: Project[] = [
     ],
     technologies: ['Claude AI API', 'React', 'Node.js', 'Python', 'Natural Language Processing'],
     links: {
-      github: 'https://github.com/gauravchaulagain'
+      github: 'https://github.com/Gaurav890/Elda/'
     }
   },
   {
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     ],
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'WebRTC', 'Stripe API', 'JWT'],
     links: {
-      github: 'https://github.com/gauravchaulagain'
+      github: 'https://github.com/Gaurav890/bridgechild'
     }
   },
   {
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     ],
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Fitbit API', 'Jupyter'],
     links: {
-      github: 'https://github.com/gauravchaulagain'
+      github: 'https://github.com/Gaurav890/fittrack-analytics'
     }
   }
 ];
