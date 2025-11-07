@@ -56,6 +56,7 @@ export const education = [
     institution: "St. Xavier's College",
     location: 'Kathmandu, Nepal',
     period: '2017 - 2021',
+    gpa: '4.0/4.0',
     focus: 'Computer Science, Software Development'
   }
 ];
