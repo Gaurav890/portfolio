@@ -1,24 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: #F8F9FA;
-    --foreground: #0A0A0A;
-  }
+@theme {
+  /* Custom Colors */
+  --color-base-white: #FFFFFF;
+  --color-cream-bg: #F8F9FA;
+  --color-ocean-blue: #0EA5E9;
+  --color-deep-black: #0A0A0A;
+  --color-soft-blue: #DBEAFE;
+  --color-gray-text: #4B5563;
+  --color-light-gray: #F3F4F6;
 
-  * {
-    @apply border-border;
-  }
+  /* System colors */
+  --color-background: #F8F9FA;
+  --color-foreground: #0A0A0A;
+}
 
-  body {
-    @apply bg-cream-bg text-deep-black font-sans antialiased;
-  }
+body {
+  background-color: var(--color-cream-bg);
+  color: var(--color-deep-black);
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 @layer components {
