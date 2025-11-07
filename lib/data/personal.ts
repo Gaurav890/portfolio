@@ -4,10 +4,10 @@ export const personalInfo = {
   name: 'Gaurav Chaulagain',
   title: 'Product Manager/Technical PM',
   tagline: 'Building AI products that bridge strategy and execution',
-  shortBio: 'Product Manager specializing in AI products with expertise in technical product management, cross-functional collaboration, and data-driven decision making. Currently pursuing MS in Computer Science at San Francisco Bay University.',
-  fullBio: `I'm a Product Manager with a passion for AI and technical products. My approach centers on reframing problems, thinking in systems, and measuring what matters. I believe velocity compounds—small improvements in how teams work together lead to transformative change.
+  shortBio: 'Product Manager with 3+ years shipping AI/ML products. I turn ambiguous problems into clear roadmaps, collaborate deeply with engineering, and measure what actually matters.',
+  fullBio: `Over the past 3+ years, I've built AI-powered virtual try-on platforms, scaled enterprise CMS solutions serving 100K+ businesses, and led cloud infrastructure modernization. My work has driven 100%+ traffic growth, 600%+ conversion improvements, and helped teams ship 3x faster.
 
-With experience at fAIshion Inc., WP Creative, and Hazesoft, I've led products from conception to launch, always focusing on user trust, technical reliability, and measurable impact. My background in computer science enables me to bridge the gap between technical teams and business objectives.`,
+  Currently finishing my CS Master's at San Francisco Bay University (graduating Dec 2025). My team won 'Best Use of Claude' at Cal Hacks 12.0 for building an AI eldercare assistant. When I'm not building products, I'm mentoring students or exploring Oakland's coffee scene.`,
   location: 'Oakland, California, USA',
   email: 'gauravchaulagain0@gmail.com',
   phone: '925-860-9912',
