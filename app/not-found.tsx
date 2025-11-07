@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Home, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui';
@@ -28,26 +30,27 @@ export default function NotFound() {
                 Go Home
               </Button>
             </Link>
-            <button
+            <Button
+              variant="secondary"
+              size="lg"
               onClick={() => window.history.back()}
-              className="btn-secondary"
             >
               <ArrowLeft className="mr-2 w-5 h-5" />
               Go Back
-            </button>
+            </Button>
           </div>
 
           {/* Helpful Links */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <p className="text-sm text-gray-text mb-4">Maybe you're looking for:</p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/case-studies" className="link-primary">
+              <Link href="/case-studies" className="text-ocean-blue hover:text-ocean-blue/80 font-semibold transition-colors cursor-pointer">
                 Case Studies
               </Link>
-              <Link href="/projects" className="link-primary">
+              <Link href="/projects" className="text-ocean-blue hover:text-ocean-blue/80 font-semibold transition-colors cursor-pointer">
                 Projects
               </Link>
-              <Link href="/#contact" className="link-primary">
+              <Link href="/#contact" className="text-ocean-blue hover:text-ocean-blue/80 font-semibold transition-colors cursor-pointer">
                 Contact
               </Link>
             </div>

@@ -4,8 +4,8 @@ export const experiences: Experience[] = [
   {
     id: '1',
     company: 'fAIshion Inc.',
-    role: 'Product Manager (Technical)',
-    period: 'July 2024 - October 2024',
+    role: 'Product Manager/Technical Project Coordinator',
+    period: 'July 2025 - October 2025',
     location: 'San Francisco, California, USA',
     description: 'Led the development of an AI-powered virtual try-on platform that uses generative AI to help users visualize clothing before purchase.',
     achievements: [

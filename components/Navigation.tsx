@@ -10,6 +10,7 @@ import { personalInfo } from '@/lib/data';
 
 const navLinks = [
   { name: 'Home', href: '/' },
+  { name: 'Blog', href: 'https://medium.com/@gauravchaulagain/' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Projects', href: '/projects' },
   { name: 'Contact', href: '#contact' },

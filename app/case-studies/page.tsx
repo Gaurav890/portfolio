@@ -35,7 +35,7 @@ export default function CaseStudiesPage() {
                 initial="rest"
                 whileHover="hover"
               >
-                <Link href={`/case-studies/${caseStudy.slug}`}>
+                <Link href={`/case-studies/${caseStudy.slug}`} className="cursor-pointer">
                   <motion.article
                     variants={cardHover}
                     className="card h-full p-8 flex flex-col"

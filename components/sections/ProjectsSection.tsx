@@ -37,11 +37,10 @@ export const ProjectsSection = () => {
               initial="rest"
               whileHover="hover"
             >
-              <Link href={`/projects/${project.slug}`}>
-                <motion.div
-                  variants={cardHover}
-                  className="card h-full p-6 flex flex-col"
-                >
+              <motion.div
+                variants={cardHover}
+                className="card h-full p-6 flex flex-col"
+              >
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.slice(0, 3).map((tag, idx) => (
@@ -93,8 +92,7 @@ export const ProjectsSection = () => {
                         href={project.links.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-gray-text hover:text-ocean-blue transition-colors"
-                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center gap-1 text-sm text-gray-text hover:text-ocean-blue transition-colors cursor-pointer"
                       >
                         <Github className="w-4 h-4" />
                         Code
@@ -105,20 +103,21 @@ export const ProjectsSection = () => {
                         href={project.links.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-gray-text hover:text-ocean-blue transition-colors"
-                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center gap-1 text-sm text-gray-text hover:text-ocean-blue transition-colors cursor-pointer"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Live
                       </a>
                     )}
-                    <span className="ml-auto text-ocean-blue text-sm font-medium flex items-center gap-1">
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="ml-auto text-ocean-blue text-sm font-medium flex items-center gap-1 hover:text-ocean-blue/80 transition-colors cursor-pointer"
+                    >
                       View Details
                       <ArrowRight className="w-4 h-4" />
-                    </span>
+                    </Link>
                   </div>
                 </motion.div>
-              </Link>
             </motion.div>
           ))}
         </div>

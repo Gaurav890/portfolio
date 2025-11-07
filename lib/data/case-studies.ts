@@ -7,7 +7,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'fAIshion.AI',
     subtitle: 'Building Trust in AI Try-On Experiences',
     company: 'fAIshion Inc.',
-    period: 'July 2024 - October 2024',
+    period: 'July 2025 - October 2025',
     role: 'Product Manager (Technical)',
     featured: true,
     tags: ['AI/ML', 'Trust & Transparency', 'E-commerce', 'Generative AI'],

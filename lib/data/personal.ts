@@ -11,7 +11,7 @@ export const personalInfo = {
   location: 'Oakland, California, USA',
   email: 'gauravchaulagain0@gmail.com',
   phone: '925-860-9912',
-  availability: 'Open to Product Manager and Technical PM roles at startups',
+  availability: 'Open to Product Manager and Technical PM roles',
 };
 
 export const socialLinks: SocialLink[] = [

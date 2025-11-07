@@ -88,7 +88,7 @@ export const HighlightsSection = () => {
                         href={highlight.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-semibold text-deep-black hover:text-ocean-blue transition-colors inline-flex items-center gap-1"
+                        className="text-sm font-semibold text-deep-black hover:text-ocean-blue transition-colors inline-flex items-center gap-1 cursor-pointer"
                       >
                         View Details
                         <ExternalLink className="w-3 h-3" />
@@ -150,7 +150,7 @@ export const HighlightsSection = () => {
                           href={highlight.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-deep-black hover:text-ocean-blue transition-colors inline-flex items-center gap-1"
+                          className="text-sm font-semibold text-deep-black hover:text-ocean-blue transition-colors inline-flex items-center gap-1 cursor-pointer"
                         >
                           View Credential
                           <ExternalLink className="w-3 h-3" />

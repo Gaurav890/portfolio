@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${manrope.variable}`}>
-      <body className={manrope.className}>
+      <body className={manrope.className} suppressHydrationWarning>
         <Navigation />
         {children}
         <Footer />

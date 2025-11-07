@@ -13,22 +13,22 @@ export const AboutSection = () => {
     {
       icon: <Sparkles className="w-5 h-5" />,
       title: 'Reframe the Problem',
-      desc: 'I start by questioning assumptions. At fAIshion, users wanted "better images"—but the real problem was trust in AI-generated content. We solved it with transparency features, not just image quality.',
+      desc: 'I start by questioning assumptions. Users once told me they wanted "better images"—but the real problem was trust in AI-generated content. We solved it with transparency features, not just image quality.',
     },
     {
       icon: <Network className="w-5 h-5" />,
       title: 'Think in Systems',
-      desc: 'When Ironfish had low traffic, the root cause wasn\'t content—it was site speed (3.2s load time). Fixing infrastructure increased organic traffic by 100% and rankings by 85%.',
+      desc: 'When a property investment platform had low traffic, everyone blamed content. I found the root cause: 3.2-second load times. Fixing infrastructure increased organic traffic by 100% and rankings by 85%.',
     },
     {
       icon: <Target className="w-5 h-5" />,
       title: 'Measure What Matters',
-      desc: 'At Flare HR, I ignored vanity metrics and focused on lead quality over quantity. Result: 619% traffic growth translated to 617% increase in qualified conversions.',
+      desc: 'I ignore vanity metrics. On a fintech project serving 100K+ businesses, I focused on lead quality over quantity. 619% traffic growth became 617% increase in qualified conversions—not just clicks.',
     },
     {
       icon: <Zap className="w-5 h-5" />,
       title: 'Ship Fast, Learn Faster',
-      desc: 'Reduced Flare HR\'s campaign setup time by 86% through workflow optimization. Faster iterations compound—3x marketing velocity enabled rapid experimentation and learning.',
+      desc: 'I reduced one team\'s campaign setup time by 86% through workflow optimization. Faster iterations compound—3x velocity enabled rapid experimentation and continuous learning.',
     },
   ];
 
