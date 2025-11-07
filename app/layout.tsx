@@ -19,21 +19,21 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Gaurav H. Chaulagain - Product Manager & AI Specialist",
+  title: "Gaurav Chaulagain - Product Manager & AI Specialist",
   description: "Product Manager specializing in AI products, with expertise in technical product management, cross-functional collaboration, and data-driven decision making.",
   keywords: ["Product Manager", "Technical PM", "AI Products", "Machine Learning", "Product Strategy"],
-  authors: [{ name: "Gaurav H. Chaulagain" }],
+  authors: [{ name: "Gaurav Chaulagain" }],
   openGraph: {
-    title: "Gaurav H. Chaulagain - Product Manager",
+    title: "Gaurav Chaulagain - Product Manager",
     description: "Product Manager specializing in AI products and technical product management",
     url: "https://gauravhchaulagain.com",
-    siteName: "Gaurav H. Chaulagain Portfolio",
+    siteName: "Gaurav Chaulagain Portfolio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gaurav H. Chaulagain - Product Manager",
+    title: "Gaurav Chaulagain - Product Manager",
     description: "Product Manager specializing in AI products and technical product management",
   },
   robots: {

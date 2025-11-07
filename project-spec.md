@@ -1,5 +1,5 @@
 # Portfolio Website Specification
-## Gaurav H. Chaulagain - Product Manager Portfolio
+## Gaurav Chaulagain - Product Manager Portfolio
 
 **Domain:** gauravhchaulagain.com  
 **Tech Stack:** Next.js 15, React, Tailwind CSS, Aceternity UI, Framer Motion  

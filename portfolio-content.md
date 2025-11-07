@@ -1,5 +1,5 @@
 # Portfolio Website Content
-## Gaurav H. Chaulagain - All Website Copy & Content
+## Gaurav Chaulagain - All Website Copy & Content
 
 **Last Updated:** November 6, 2025  
 **Status:** In Progress

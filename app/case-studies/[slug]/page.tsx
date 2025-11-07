@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${caseStudy.title} - ${caseStudy.subtitle} | Gaurav H. Chaulagain`,
+    title: `${caseStudy.title} - ${caseStudy.subtitle} | Gaurav Chaulagain`,
     description: caseStudy.summary,
     keywords: [...caseStudy.tags, 'Product Management', 'Case Study'].join(', '),
   };

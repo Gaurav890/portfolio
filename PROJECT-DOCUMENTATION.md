@@ -1,7 +1,7 @@
 # Portfolio Website Project Documentation
 
 ## Project Overview
-Built a complete portfolio website for **Gaurav H. Chaulagain**, a Product Manager specializing in AI products. The site showcases professional experience, case studies, personal projects, and achievements.
+Built a complete portfolio website for **Gaurav Chaulagain**, a Product Manager specializing in AI products. The site showcases professional experience, case studies, personal projects, and achievements.
 
 **Live Development Server:** http://localhost:3001
 **Tech Stack:** Next.js 16, TypeScript, Tailwind CSS v4, Framer Motion
@@ -308,7 +308,7 @@ Each detail page includes:
 7. Chief Strategy Officer - Entrepreneurship Club
 
 ### Personal Information
-- **Name:** Gaurav H. Chaulagain
+- **Name:** Gaurav Chaulagain
 - **Title:** Product Manager (Technical)
 - **Tagline:** Building AI products that bridge strategy and execution
 - **Location:** Oakland, California, USA
