@@ -41,8 +41,8 @@ export const AboutSection = () => {
       >
         {/* Section Header */}
         <motion.div variants={staggerItem} className="text-center mb-16">
-          <h2 className="heading-lg mb-4 text-deep-black">About Me</h2>
-          <div className="w-20 h-1 bg-deep-black mx-auto" />
+          <h2 className="heading-lg mb-4 text-slate-900">About Me</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 mx-auto rounded-full" />
         </motion.div>
 
         {/* Bio with Cal Hacks Badge */}
@@ -66,13 +66,13 @@ export const AboutSection = () => {
               transition={{ delay: 0.3 }}
               className="mt-8"
             >
-              <div className="inline-flex items-center gap-4 px-6 py-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-md">
-                <div className="w-12 h-12 rounded-xl bg-deep-black flex items-center justify-center">
+              <div className="inline-flex items-center gap-4 px-6 py-4 bg-gradient-to-r from-indigo-50 to-slate-50 rounded-2xl border-2 border-indigo-200/50 hover:border-indigo-300 transition-all duration-300 hover:shadow-lg">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-slate-900 flex items-center justify-center shadow-md">
                   <Trophy className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-deep-black">Cal Hacks 12.0 Winner</p>
-                  <p className="text-xs text-gray-text">Best Use of Claude by Anthropic</p>
+                  <p className="text-sm font-semibold text-slate-900">Cal Hacks 12.0 Winner</p>
+                  <p className="text-xs text-slate-600">Best Use of Claude by Anthropic</p>
                 </div>
               </div>
             </motion.div>
@@ -82,8 +82,8 @@ export const AboutSection = () => {
         {/* Product Philosophy - Critical Thinking */}
         <motion.div variants={staggerItem} className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <h3 className="text-3xl font-bold text-deep-black mb-3">How I Think About Products</h3>
-            <p className="text-lg text-gray-text">
+            <h3 className="text-3xl font-bold text-slate-900 mb-3">How I Think About Products</h3>
+            <p className="text-lg text-slate-600">
               Four principles backed by real results from my product work
             </p>
           </div>
@@ -95,16 +95,16 @@ export const AboutSection = () => {
                 variants={slideUp}
                 className="group"
               >
-                <div className="p-6 bg-white border border-gray-200 rounded-xl hover:border-deep-black hover:shadow-lg transition-all duration-300">
+                <div className="p-6 bg-white border-2 border-slate-200 rounded-xl hover:border-indigo-600 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-deep-black group-hover:text-white transition-all duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
                       {principle.icon}
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg font-bold text-deep-black mb-2">
+                      <h4 className="text-lg font-bold text-slate-900 mb-2">
                         {principle.title}
                       </h4>
-                      <p className="text-sm text-gray-text leading-relaxed">
+                      <p className="text-sm text-slate-600 leading-relaxed">
                         {principle.desc}
                       </p>
                     </div>

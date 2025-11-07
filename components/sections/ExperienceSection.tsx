@@ -22,8 +22,8 @@ export const ExperienceSection = () => {
         >
           {/* Section Header */}
           <motion.div variants={staggerItem} className="text-center mb-16">
-            <h2 className="heading-lg mb-4 text-deep-black">Experience</h2>
-            <div className="w-20 h-1 bg-deep-black mx-auto" />
+            <h2 className="heading-lg mb-4 text-slate-900">Experience</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 mx-auto rounded-full" />
           </motion.div>
 
           {/* Timeline */}
@@ -40,7 +40,7 @@ export const ExperienceSection = () => {
                   className="relative"
                 >
                   {/* Timeline Dot */}
-                  <div className="hidden md:block absolute left-[30px] w-3 h-3 bg-deep-black rounded-full ring-4 ring-cream-bg" />
+                  <div className="hidden md:block absolute left-[30px] w-3 h-3 bg-indigo-600 rounded-full ring-4 ring-cream-bg" />
 
                   {/* Experience Card */}
                   <div className="md:ml-20">
@@ -48,16 +48,16 @@ export const ExperienceSection = () => {
                       variant="default"
                       padding="lg"
                       hover="lift"
-                      className="cursor-pointer group border-gray-200 hover:border-deep-black transition-all duration-300"
+                      className="cursor-pointer group border-slate-200 hover:border-indigo-600 transition-all duration-300"
                       onClick={() => setSelectedExperience(exp)}
                     >
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-2">
-                            <h3 className="text-xl font-bold text-deep-black group-hover:text-ocean-blue transition-colors">
+                            <h3 className="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                               {exp.role}
                             </h3>
-                            <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-ocean-blue group-hover:translate-x-1 transition-all" />
+                            <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
                           </div>
                           <p className="text-lg font-semibold text-gray-text">
                             {exp.company}

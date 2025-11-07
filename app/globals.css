@@ -1,39 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom Colors */
+  /* Slate & Indigo Color Palette */
   --color-base-white: #FFFFFF;
-  --color-cream-bg: #FAFBFC;
-  --color-ocean-blue: #0EA5E9;
-  --color-deep-black: #0A0A0A;
-  --color-soft-blue: #DBEAFE;
-  --color-gray-text: #4B5563;
-  --color-light-gray: #F3F4F6;
+  --color-cream-bg: #F8FAFC;
 
-  /* New Design Colors */
-  --color-purple: #8B5CF6;
-  --color-purple-light: #EDE9FE;
+  /* Slate Scale - Primary Dark Colors */
+  --color-slate-950: #020617;
+  --color-slate-900: #0F172A;
+  --color-slate-800: #1E293B;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+  --color-slate-300: #CBD5E1;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F1F5F9;
+  --color-slate-50: #F8FAFC;
+
+  /* Indigo Scale - Primary Accent */
+  --color-indigo-700: #3730A3;
+  --color-indigo-600: #4F46E5;
+  --color-indigo-500: #6366F1;
+  --color-indigo-400: #818CF8;
+  --color-indigo-300: #A5B4FC;
+  --color-indigo-200: #C7D2FE;
+  --color-indigo-100: #E0E7FF;
+  --color-indigo-50: #EEF2FF;
+
+  /* Legacy mappings for backward compatibility */
+  --color-ocean-blue: #4F46E5;
+  --color-deep-black: #0F172A;
+  --color-soft-blue: #EEF2FF;
+  --color-gray-text: #475569;
+  --color-light-gray: #F1F5F9;
+  --color-purple: #6366F1;
   --color-green: #10B981;
-  --color-green-light: #D1FAE5;
   --color-orange: #F59E0B;
-  --color-orange-light: #FEF3C7;
   --color-pink: #EC4899;
-  --color-pink-light: #FCE7F3;
-  --color-indigo: #6366F1;
-  --color-indigo-light: #E0E7FF;
+  --color-indigo: #4F46E5;
   --color-teal: #14B8A6;
-  --color-teal-light: #CCFBF1;
 
   /* System colors */
-  --color-background: #FAFBFC;
-  --color-foreground: #0A0A0A;
+  --color-background: #F8FAFC;
+  --color-foreground: #0F172A;
 }
 
 body {
   background-color: var(--color-cream-bg);
-  color: var(--color-deep-black);
-  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-slate-900);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -54,18 +73,22 @@ html {
   /* Heading styles */
   .heading-xl {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    font-family: var(--font-display);
   }
 
   .heading-lg {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    font-family: var(--font-display);
   }
 
   .heading-md {
     @apply text-2xl md:text-3xl font-bold tracking-tight;
+    font-family: var(--font-display);
   }
 
   .heading-sm {
     @apply text-xl md:text-2xl font-semibold;
+    font-family: var(--font-display);
   }
 
   /* Body text */
@@ -84,15 +107,17 @@ html {
 
   /* Button styles */
   .btn-primary {
-    @apply bg-ocean-blue text-white px-6 py-3 rounded-lg font-medium
-           hover:bg-ocean-blue/90 transition-all duration-200
+    @apply bg-slate-900 text-white px-6 py-3 rounded-lg font-medium
+           hover:bg-slate-800 transition-all duration-200
            shadow-sm hover:shadow-md;
+    font-family: var(--font-display);
   }
 
   .btn-secondary {
-    @apply bg-transparent border-2 border-ocean-blue text-ocean-blue px-6 py-3
-           rounded-lg font-medium hover:bg-ocean-blue hover:text-white
+    @apply bg-transparent border-2 border-slate-900 text-slate-900 px-6 py-3
+           rounded-lg font-medium hover:bg-slate-900 hover:text-white
            transition-all duration-200;
+    font-family: var(--font-display);
   }
 
   /* Card styles */
@@ -112,11 +137,15 @@ html {
 
   /* Gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-ocean-blue to-blue-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent;
   }
 
-  .gradient-text-purple {
-    @apply bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent;
+  .gradient-text-accent {
+    @apply bg-gradient-to-r from-slate-900 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-warm {
+    @apply bg-gradient-to-r from-indigo-500 to-indigo-300 bg-clip-text text-transparent;
   }
 
   /* Section Separators */

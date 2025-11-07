@@ -18,8 +18,8 @@ export const EducationSection = () => {
       >
         {/* Section Header */}
         <motion.div variants={staggerItem} className="text-center mb-16">
-          <h2 className="heading-lg mb-4 text-deep-black">Education</h2>
-          <div className="w-20 h-1 bg-deep-black mx-auto" />
+          <h2 className="heading-lg mb-4 text-slate-900">Education</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 mx-auto rounded-full" />
         </motion.div>
 
         {/* Education Cards */}
@@ -35,21 +35,21 @@ export const EducationSection = () => {
                   variant="default"
                   padding="lg"
                   hover="lift"
-                  className="h-full border-gray-200 hover:border-deep-black transition-all duration-300 group"
+                  className="h-full border-slate-200 hover:border-indigo-600 transition-all duration-300 group"
                 >
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-gray-100 group-hover:bg-deep-black flex items-center justify-center flex-shrink-0 transition-all duration-300">
-                      <GraduationCap className="w-7 h-7 text-gray-600 group-hover:text-white transition-colors" />
+                    <div className="w-14 h-14 rounded-xl bg-slate-100 group-hover:bg-indigo-600 flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                      <GraduationCap className="w-7 h-7 text-slate-600 group-hover:text-white transition-colors" />
                     </div>
                     {edu.gpa && (
                       <div className="ml-auto text-right">
-                        <div className="text-3xl font-bold text-deep-black">{edu.gpa}</div>
-                        <div className="text-xs text-gray-text font-medium">GPA</div>
+                        <div className="text-3xl font-bold text-indigo-600">{edu.gpa}</div>
+                        <div className="text-xs text-slate-600 font-medium">GPA</div>
                       </div>
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-deep-black mb-3">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
                     {edu.degree}
                   </h3>
 
