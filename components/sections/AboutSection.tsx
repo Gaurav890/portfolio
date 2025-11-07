@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Section, Card } from '@/components/ui';
 import { personalInfo, education } from '@/lib/data';
 import { slideUp, staggerContainer, staggerItem, viewportConfig } from '@/lib/animations';
@@ -45,43 +46,44 @@ export const AboutSection = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 mx-auto rounded-full" />
         </motion.div>
 
-        {/* Bio with Cal Hacks Badge */}
-        <div className="max-w-4xl mx-auto mb-20">
+        {/* Bio with Image */}
+        <div className="max-w-6xl mx-auto mb-20">
           <motion.div variants={staggerItem} className="relative">
-            {/* Main Bio */}
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-gray-text leading-relaxed mb-6">
-                {personalInfo.fullBio.split('\n\n')[0]}
-              </p>
-              <p className="text-lg text-gray-text leading-relaxed">
-                {personalInfo.fullBio.split('\n\n')[1]}
-              </p>
-            </div>
-
-            {/* Cal Hacks Winner Badge - Floating */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={viewportConfig}
-              transition={{ delay: 0.3 }}
-              className="mt-8"
-            >
-              <div className="inline-flex items-center gap-4 px-6 py-4 bg-gradient-to-r from-indigo-50 to-slate-50 rounded-2xl border-2 border-indigo-200/50 hover:border-indigo-300 transition-all duration-300 hover:shadow-lg">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-slate-900 flex items-center justify-center shadow-md">
-                  <Trophy className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">Cal Hacks 12.0 Winner</p>
-                  <p className="text-xs text-slate-600">Best Use of Claude by Anthropic</p>
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              {/* Profile Image - Left Side */}
+              <div className="flex-shrink-0">
+                <div className="relative w-64 h-64 md:w-80 md:h-80">
+                  {/* Circular image container with placeholder */}
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-ocean-blue/20 to-ocean-blue/10 border-4 border-ocean-blue/30 flex items-center justify-center overflow-hidden">
+                    <Image
+                      src="/images/gaurav_profile.png"
+                      alt="Gaurav Profile Picture"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  {/* Decorative ring */}
+                  <div className="absolute inset-0 rounded-full border-2 border-ocean-blue/20 -z-10 scale-110"></div>
                 </div>
               </div>
-            </motion.div>
+
+              {/* Bio Text - Right Side */}
+              <div className="prose prose-lg max-w-none md:max-w-2xl">
+                <p className="text-lg text-gray-text leading-relaxed mb-6">
+                  {personalInfo.fullBio.split('\n\n')[0]}
+                </p>
+                <p className="text-lg text-gray-text leading-relaxed">
+                  {personalInfo.fullBio.split('\n\n')[1]}
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
 
         {/* Product Philosophy - Critical Thinking */}
         <motion.div variants={staggerItem} className="max-w-6xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-12 text-center">
             <h3 className="text-3xl font-bold text-slate-900 mb-3">How I Think About Products</h3>
             <p className="text-lg text-slate-600">
               Four principles backed by real results from my product work
@@ -93,11 +95,10 @@ export const AboutSection = () => {
               <motion.div
                 key={index}
                 variants={slideUp}
-                className="group"
               >
-                <div className="p-6 bg-white border-2 border-slate-200 rounded-xl hover:border-indigo-600 hover:shadow-lg transition-all duration-300">
+                <div className="p-6 bg-white border-2 border-ocean-blue/20 rounded-xl shadow-sm">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-ocean-blue text-white flex items-center justify-center flex-shrink-0">
                       {principle.icon}
                     </div>
                     <div className="flex-1">

@@ -104,7 +104,7 @@ export default function CaseStudiesPage() {
                     {/* Read More */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                       <span className="text-sm text-gray-text">{caseStudy.role}</span>
-                      <span className="text-ocean-blue font-medium flex items-center gap-2 group">
+                      <span className="px-4 py-2 bg-ocean-blue text-white rounded-lg font-semibold flex items-center gap-2 hover:bg-ocean-blue/90 transition-colors group">
                         Read Full Case Study
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </span>

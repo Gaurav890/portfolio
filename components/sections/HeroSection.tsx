@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
-import { Button } from '@/components/ui';
+import { Button, FloatingIcons } from '@/components/ui';
 import { personalInfo } from '@/lib/data';
 import { fadeIn, slideUp, staggerContainer, staggerItem } from '@/lib/animations';
 
@@ -19,6 +19,9 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-soft-blue via-cream-bg to-white -z-10" />
+
+      {/* Floating Tool Icons */}
+      <FloatingIcons />
 
       {/* Animated circles */}
       <motion.div
@@ -105,9 +108,11 @@ export const HeroSection = () => {
             <Button
               variant="secondary"
               size="lg"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('/resume.pdf', '_blank')}
+              className="group"
             >
-              Get in Touch
+              <Download className="mr-2 w-5 h-5" />
+              Download Resume
             </Button>
           </motion.div>
 

@@ -1,8 +1,8 @@
 import { SocialLink } from '../types';
 
 export const personalInfo = {
-  name: 'Gaurav H. Chaulagain',
-  title: 'Product Manager (Technical)',
+  name: 'Gaurav Chaulagain',
+  title: 'Product Manager/Technical PM',
   tagline: 'Building AI products that bridge strategy and execution',
   shortBio: 'Product Manager specializing in AI products with expertise in technical product management, cross-functional collaboration, and data-driven decision making. Currently pursuing MS in Computer Science at San Francisco Bay University.',
   fullBio: `I'm a Product Manager with a passion for AI and technical products. My approach centers on reframing problems, thinking in systems, and measuring what matters. I believe velocity compounds—small improvements in how teams work together lead to transformative change.
@@ -22,7 +22,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: 'GitHub',
-    url: 'https://github.com/gauravchaulagain',
+    url: 'https://github.com/Gaurav890',
     icon: 'github'
   },
   {
@@ -32,12 +32,12 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: 'Calendly',
-    url: '#', // TODO: Add Calendly URL
+    url: 'https://calendly.com/gaurav-chaulagain/30min',
     icon: 'calendar'
   },
   {
     platform: 'Medium',
-    url: '#', // TODO: Add Medium URL
+    url: 'https://medium.com/@gauravchaulagain', 
     icon: 'book-open'
   }
 ];

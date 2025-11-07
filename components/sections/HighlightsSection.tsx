@@ -19,12 +19,12 @@ export const HighlightsSection = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={viewportConfig}
+        viewport={{ once: true, amount: 0.1 }}
       >
         {/* Section Header */}
         <motion.div variants={staggerItem} className="text-center mb-20">
-          <h2 className="heading-lg mb-4 text-deep-black">Achievements & Recognition</h2>
-          <div className="w-20 h-1 bg-deep-black mx-auto mb-6" />
+          <h2 className="heading-lg mb-4 text-slate-900">Achievements & Recognition</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-ocean-blue to-indigo-400 mx-auto rounded-full mb-6" />
           <p className="text-lg text-gray-text max-w-2xl mx-auto">
             Continuous learning and community leadership
           </p>
@@ -33,13 +33,13 @@ export const HighlightsSection = () => {
         {/* Hackathons & Awards */}
         <motion.div variants={staggerItem} className="mb-20">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-deep-black flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-ocean-blue flex items-center justify-center">
               <Trophy className="w-5 h-5 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-deep-black">Hackathons & Awards</h3>
+            <h3 className="text-2xl font-bold text-slate-900">Hackathons & Awards</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-6">
             {hackathons.map((highlight) => (
               <motion.div
                 key={highlight.id}
@@ -52,7 +52,7 @@ export const HighlightsSection = () => {
                   hover="lift"
                   className="h-full border-gray-200 hover:border-deep-black transition-all duration-300"
                 >
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-deep-black group-hover:text-white transition-all duration-300">
                       <Trophy className="w-6 h-6" />
                     </div>
@@ -72,13 +72,27 @@ export const HighlightsSection = () => {
                   </p>
 
                   {highlight.achievement && (
-                    <div className="pt-4 border-t border-gray-200">
+                    <div className="pt-4 border-t border-gray-200 mb-4">
                       <div className="flex items-start gap-2">
                         <Award className="w-4 h-4 text-deep-black flex-shrink-0 mt-0.5" />
                         <p className="text-sm font-semibold text-deep-black">
                           {highlight.achievement}
                         </p>
                       </div>
+                    </div>
+                  )}
+
+                  {highlight.link && (
+                    <div className="pt-4 border-t border-gray-200">
+                      <a
+                        href={highlight.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-semibold text-deep-black hover:text-ocean-blue transition-colors inline-flex items-center gap-1"
+                      >
+                        View Details
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
                     </div>
                   )}
                 </Card>
@@ -90,16 +104,16 @@ export const HighlightsSection = () => {
         {/* Certifications */}
         <motion.div variants={staggerItem} className="mb-20">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-deep-black flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-ocean-blue flex items-center justify-center">
               <Award className="w-5 h-5 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-deep-black">Professional Certifications</h3>
+            <h3 className="text-2xl font-bold text-slate-900">Professional Certifications</h3>
             <span className="ml-auto px-3 py-1 bg-gray-100 text-deep-black rounded-full text-sm font-semibold">
               {certifications.length} Certifications
             </span>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((highlight) => (
               <motion.div
                 key={highlight.id}
@@ -153,13 +167,13 @@ export const HighlightsSection = () => {
         {/* Leadership */}
         <motion.div variants={staggerItem}>
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-deep-black flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-ocean-blue flex items-center justify-center">
               <Lightbulb className="w-5 h-5 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-deep-black">Leadership & Community</h3>
+            <h3 className="text-2xl font-bold text-slate-900">Leadership & Community</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-6">
             {leadership.map((highlight) => (
               <motion.div
                 key={highlight.id}
@@ -172,7 +186,7 @@ export const HighlightsSection = () => {
                   hover="lift"
                   className="h-full border-gray-200 hover:border-deep-black transition-all duration-300"
                 >
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-deep-black group-hover:text-white transition-all duration-300">
                       <Lightbulb className="w-6 h-6" />
                     </div>

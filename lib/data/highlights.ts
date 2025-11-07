@@ -9,7 +9,37 @@ export const highlights: Highlight[] = [
     date: 'October 2024',
     description: 'Built ELDA.AI, an AI-powered eldercare assistant using Claude API',
     achievement: 'Winner - Best Use of Claude by Anthropic',
-    link: 'https://www.linkedin.com/in/gaurav-chaulagain/'
+    link: 'https://devpost.com/software/elda-ai'
+  },
+  {
+    id: '8',
+    type: 'hackathon',
+    title: 'FR. MARSHALL D. MORAN, S.J. MEMORIAL AWARD FOR EXCELLENCE IN ACADEMICS',
+    organization: 'St. Xavier\'s College',
+    date: 'December 2022',
+    description: 'Recognized for outstanding academic excellence and consistent high performance throughout the academic year',
+    achievement: 'Memorial Award for Academic Excellence',
+    link: 'https://drive.google.com/file/d/1DDFhBc9F6C9MtIq8HCTnSOs7qYIZpWsu/view'
+  },
+  {
+    id: '9',
+    type: 'hackathon',
+    title: 'LSRA Research Student Cycle III',
+    organization: 'St. Xavier\'s College, Research Team',
+    date: 'April 2022',
+    description: 'Selected as a research student for the LSRA Research program, contributing to advanced research initiatives',
+    achievement: 'LSRA Research Student',
+    link: 'https://drive.google.com/file/d/15FR2d7OWwwBEMw_rz7PrqfRTp789Y0uG/view'
+  },
+  {
+    id: '10',
+    type: 'hackathon',
+    title: 'Winner of "Rising Student ICT Awards 2020"',
+    organization: 'ICT Award 2020 - I C Tech Media Pvt. Ltd.',
+    date: '2020',
+    description: 'Awarded for outstanding achievement and innovation in Information and Communication Technology',
+    achievement: 'Rising Student ICT Award Winner',
+    link: 'https://drive.google.com/file/d/15x1IwVC3Y_SXbpcIOtkf7MUEG2vTRipb/view'
   },
   {
     id: '2',

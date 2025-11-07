@@ -9,7 +9,7 @@ import { slideUp, staggerContainer, staggerItem, viewportConfig } from '@/lib/an
 
 export const EducationSection = () => {
   return (
-    <Section className="bg-white">
+    <Section className="bg-gradient-to-br from-soft-blue via-cream-bg to-white">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
