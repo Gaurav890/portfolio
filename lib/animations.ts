@@ -154,8 +154,8 @@ export const pageTransition: Variants = {
 // Viewport configuration for scroll-triggered animations
 export const viewportConfig = {
   once: true,
-  amount: 0.3,
-  margin: '-100px',
+  amount: 0.1,
+  margin: '0px',
 };
 
 // Aceternity UI-inspired advanced animations
