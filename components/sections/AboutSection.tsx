@@ -2,11 +2,35 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Section } from '@/components/ui';
+import { Section, Card } from '@/components/ui';
 import { personalInfo, education } from '@/lib/data';
 import { slideUp, staggerContainer, staggerItem, viewportConfig } from '@/lib/animations';
+import { GraduationCap, Sparkles, Target, Network, TrendingUp, Zap, Trophy } from 'lucide-react';
 
 export const AboutSection = () => {
+  const philosophies = [
+    {
+      icon: <Sparkles className="w-5 h-5" />,
+      title: 'Reframe the Problem',
+      desc: 'I start by questioning assumptions. At fAIshion, users wanted "better images"—but the real problem was trust in AI-generated content. We solved it with transparency features, not just image quality.',
+    },
+    {
+      icon: <Network className="w-5 h-5" />,
+      title: 'Think in Systems',
+      desc: 'When Ironfish had low traffic, the root cause wasn\'t content—it was site speed (3.2s load time). Fixing infrastructure increased organic traffic by 100% and rankings by 85%.',
+    },
+    {
+      icon: <Target className="w-5 h-5" />,
+      title: 'Measure What Matters',
+      desc: 'At Flare HR, I ignored vanity metrics and focused on lead quality over quantity. Result: 619% traffic growth translated to 617% increase in qualified conversions.',
+    },
+    {
+      icon: <Zap className="w-5 h-5" />,
+      title: 'Ship Fast, Learn Faster',
+      desc: 'Reduced Flare HR\'s campaign setup time by 86% through workflow optimization. Faster iterations compound—3x marketing velocity enabled rapid experimentation and learning.',
+    },
+  ];
+
   return (
     <Section className="bg-white">
       <motion.div
@@ -14,67 +38,79 @@ export const AboutSection = () => {
         initial="hidden"
         whileInView="visible"
         viewport={viewportConfig}
-        className="max-w-4xl mx-auto"
       >
         {/* Section Header */}
-        <motion.div variants={staggerItem} className="text-center mb-12">
-          <h2 className="heading-lg mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-ocean-blue mx-auto rounded-full" />
+        <motion.div variants={staggerItem} className="text-center mb-16">
+          <h2 className="heading-lg mb-4 text-deep-black">About Me</h2>
+          <div className="w-20 h-1 bg-deep-black mx-auto" />
         </motion.div>
 
-        {/* Bio */}
-        <motion.div variants={staggerItem} className="space-y-6 mb-12">
-          <p className="body-lg leading-relaxed">
-            {personalInfo.fullBio.split('\n\n')[0]}
-          </p>
-          <p className="body-lg leading-relaxed">
-            {personalInfo.fullBio.split('\n\n')[1]}
-          </p>
-        </motion.div>
+        {/* Bio with Cal Hacks Badge */}
+        <div className="max-w-4xl mx-auto mb-20">
+          <motion.div variants={staggerItem} className="relative">
+            {/* Main Bio */}
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-gray-text leading-relaxed mb-6">
+                {personalInfo.fullBio.split('\n\n')[0]}
+              </p>
+              <p className="text-lg text-gray-text leading-relaxed">
+                {personalInfo.fullBio.split('\n\n')[1]}
+              </p>
+            </div>
 
-        {/* Education */}
-        <motion.div variants={staggerItem} className="space-y-6">
-          <h3 className="heading-sm text-center mb-8">Education</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {education.map((edu, index) => (
+            {/* Cal Hacks Winner Badge - Floating */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={viewportConfig}
+              transition={{ delay: 0.3 }}
+              className="mt-8"
+            >
+              <div className="inline-flex items-center gap-4 px-6 py-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-md">
+                <div className="w-12 h-12 rounded-xl bg-deep-black flex items-center justify-center">
+                  <Trophy className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-deep-black">Cal Hacks 12.0 Winner</p>
+                  <p className="text-xs text-gray-text">Best Use of Claude by Anthropic</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Product Philosophy - Critical Thinking */}
+        <motion.div variants={staggerItem} className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h3 className="text-3xl font-bold text-deep-black mb-3">How I Think About Products</h3>
+            <p className="text-lg text-gray-text">
+              Four principles backed by real results from my product work
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {philosophies.map((principle, index) => (
               <motion.div
                 key={index}
                 variants={slideUp}
-                className="card p-6 space-y-3"
+                className="group"
               >
-                <h4 className="text-xl font-semibold text-deep-black">
-                  {edu.degree}
-                </h4>
-                <p className="text-ocean-blue font-medium">{edu.institution}</p>
-                <p className="text-sm text-gray-text">{edu.location}</p>
-                <p className="text-sm text-gray-text">{edu.period}</p>
-                {edu.gpa && (
-                  <p className="text-sm font-medium text-deep-black">
-                    GPA: {edu.gpa}
-                  </p>
-                )}
-                {edu.focus && (
-                  <p className="text-sm text-gray-text">Focus: {edu.focus}</p>
-                )}
+                <div className="p-6 bg-white border border-gray-200 rounded-xl hover:border-deep-black hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-deep-black group-hover:text-white transition-all duration-300">
+                      {principle.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-bold text-deep-black mb-2">
+                        {principle.title}
+                      </h4>
+                      <p className="text-sm text-gray-text leading-relaxed">
+                        {principle.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Product Philosophy */}
-        <motion.div variants={staggerItem} className="mt-12 p-8 bg-soft-blue/30 rounded-xl">
-          <h3 className="heading-sm mb-6 text-center">Product Philosophy</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { title: 'Reframe the Problem', desc: 'Dig deeper than stated requirements' },
-              { title: 'Think in Systems', desc: 'Address root causes, not symptoms' },
-              { title: 'Measure What Matters', desc: 'Focus on impact metrics over vanity metrics' },
-              { title: 'Velocity Compounds', desc: 'Small improvements lead to transformative change' },
-            ].map((principle, index) => (
-              <div key={index} className="space-y-2">
-                <h4 className="font-semibold text-ocean-blue">{principle.title}</h4>
-                <p className="text-sm text-gray-text">{principle.desc}</p>
-              </div>
             ))}
           </div>
         </motion.div>

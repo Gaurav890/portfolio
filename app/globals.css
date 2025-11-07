@@ -3,15 +3,29 @@
 @theme {
   /* Custom Colors */
   --color-base-white: #FFFFFF;
-  --color-cream-bg: #F8F9FA;
+  --color-cream-bg: #FAFBFC;
   --color-ocean-blue: #0EA5E9;
   --color-deep-black: #0A0A0A;
   --color-soft-blue: #DBEAFE;
   --color-gray-text: #4B5563;
   --color-light-gray: #F3F4F6;
 
+  /* New Design Colors */
+  --color-purple: #8B5CF6;
+  --color-purple-light: #EDE9FE;
+  --color-green: #10B981;
+  --color-green-light: #D1FAE5;
+  --color-orange: #F59E0B;
+  --color-orange-light: #FEF3C7;
+  --color-pink: #EC4899;
+  --color-pink-light: #FCE7F3;
+  --color-indigo: #6366F1;
+  --color-indigo-light: #E0E7FF;
+  --color-teal: #14B8A6;
+  --color-teal-light: #CCFBF1;
+
   /* System colors */
-  --color-background: #F8F9FA;
+  --color-background: #FAFBFC;
   --color-foreground: #0A0A0A;
 }
 
@@ -87,9 +101,37 @@ html {
            transition-shadow duration-300 border border-gray-200;
   }
 
+  .card-hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .card-gradient-border {
+    @apply relative bg-gradient-to-br from-ocean-blue/10 to-purple/10
+           backdrop-blur-sm border-2 border-transparent;
+  }
+
   /* Gradient text */
   .gradient-text {
     @apply bg-gradient-to-r from-ocean-blue to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-purple {
+    @apply bg-gradient-to-r from-purple to-pink bg-clip-text text-transparent;
+  }
+
+  /* Section Separators */
+  .section-divider {
+    @apply relative;
+  }
+
+  .section-divider::before {
+    content: '';
+    @apply absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent;
+  }
+
+  /* Glass morphism effect */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
   }
 }
 
