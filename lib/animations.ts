@@ -90,26 +90,29 @@ export const staggerItem: Variants = {
 };
 
 // Hover scale animation
-export const hoverScale = {
+export const hoverScale: Variants = {
   rest: { scale: 1 },
   hover: {
     scale: 1.05,
     transition: {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: [0.4, 0, 0.2, 1],
     },
   },
 };
 
 // Card hover animation
-export const cardHover = {
-  rest: { scale: 1, y: 0 },
+export const cardHover: Variants = {
+  rest: {
+    scale: 1,
+    y: 0
+  },
   hover: {
     scale: 1.02,
     y: -4,
     transition: {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: [0.4, 0, 0.2, 1],
     },
   },
 };
