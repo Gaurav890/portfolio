@@ -91,11 +91,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${manrope.variable}`}>
       <head>
-        <StructuredData />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0EA5E9" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <StructuredData />
       </head>
       <body className={manrope.className} suppressHydrationWarning>
         <GoogleAnalytics />
