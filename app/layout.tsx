@@ -3,6 +3,7 @@ import { Outfit, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import FloatingGameButton from "@/components/FloatingGameButton";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <FloatingGameButton />
       </body>
     </html>
   );
