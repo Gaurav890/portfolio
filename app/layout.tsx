@@ -53,10 +53,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/gaurav_profile.png",
+        url: "https://www.gauravhchaulagain.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Gaurav Chaulagain - Product Manager",
+        alt: "Gaurav Chaulagain - Product Manager & AI Specialist",
       },
     ],
   },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gaurav Chaulagain - Product Manager & AI Specialist",
     description: "Product Manager specializing in AI products and technical product management. Building innovative solutions.",
-    images: ["/images/gaurav_profile.png"],
+    images: ["https://www.gauravhchaulagain.com/images/og-image.jpg"],
   },
   robots: {
     index: true,
