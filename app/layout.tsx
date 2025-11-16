@@ -6,6 +6,8 @@ import { Footer } from "@/components/Footer";
 import FloatingGameButton from "@/components/FloatingGameButton";
 import StructuredData from "@/components/StructuredData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -99,6 +101,8 @@ export default function RootLayout({
       </head>
       <body className={manrope.className} suppressHydrationWarning>
         <GoogleAnalytics />
+        <Analytics />
+        <SpeedInsights />
         <Navigation />
         {children}
         <Footer />
