@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Personal Projects - Gaurav Chaulagain',
     description: 'Side projects and hackathon wins showcasing technical skills and innovative solutions',
-    url: 'https://gauravhchaulagain.com/projects',
+    url: 'https://www.gauravhchaulagain.com/projects',
     type: 'website',
   },
   twitter: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: 'Side projects and hackathon wins showcasing technical skills and innovative solutions',
   },
   alternates: {
-    canonical: 'https://gauravhchaulagain.com/projects',
+    canonical: 'https://www.gauravhchaulagain.com/projects',
   },
 };
 

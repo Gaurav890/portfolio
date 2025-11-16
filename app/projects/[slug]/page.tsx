@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${project.title} - ${project.subtitle}`,
       description: project.description,
-      url: `https://gauravhchaulagain.com/projects/${slug}`,
+      url: `https://www.gauravhchaulagain.com/projects/${slug}`,
       type: 'article',
       publishedTime: new Date().toISOString(),
       authors: ['Gaurav Chaulagain'],
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: project.description,
     },
     alternates: {
-      canonical: `https://gauravhchaulagain.com/projects/${slug}`,
+      canonical: `https://www.gauravhchaulagain.com/projects/${slug}`,
     },
   };
 }
@@ -67,7 +67,7 @@ export default async function ProjectPage({ params }: Props) {
     author: {
       '@type': 'Person',
       name: 'Gaurav Chaulagain',
-      url: 'https://gauravhchaulagain.com',
+      url: 'https://www.gauravhchaulagain.com',
     },
     dateCreated: new Date().toISOString(),
     keywords: project.tags.join(', '),

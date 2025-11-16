@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${caseStudy.title} - ${caseStudy.subtitle}`,
       description: caseStudy.summary,
-      url: `https://gauravhchaulagain.com/case-studies/${slug}`,
+      url: `https://www.gauravhchaulagain.com/case-studies/${slug}`,
       type: 'article',
       publishedTime: new Date().toISOString(),
       authors: ['Gaurav Chaulagain'],
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: caseStudy.summary,
     },
     alternates: {
-      canonical: `https://gauravhchaulagain.com/case-studies/${slug}`,
+      canonical: `https://www.gauravhchaulagain.com/case-studies/${slug}`,
     },
   };
 }
@@ -67,7 +67,7 @@ export default async function CaseStudyPage({ params }: Props) {
     author: {
       '@type': 'Person',
       name: 'Gaurav Chaulagain',
-      url: 'https://gauravhchaulagain.com',
+      url: 'https://www.gauravhchaulagain.com',
     },
     publisher: {
       '@type': 'Person',

@@ -90,9 +90,9 @@ Route (app)
 
 ### Immediate (Week 1):
 1. **Google Search Console**
-   - Add property: https://gauravhchaulagain.com
+   - Add property: https://www.gauravhchaulagain.com
    - Verify ownership
-   - Submit sitemap: https://gauravhchaulagain.com/sitemap.xml
+   - Submit sitemap: https://www.gauravhchaulagain.com/sitemap.xml
    - Update verification code in `app/layout.tsx` (line 81)
 
 2. **Test SEO Implementation**
@@ -160,10 +160,10 @@ Consider adding later:
 ## 🔗 Quick Reference
 
 ### Important URLs:
-- Homepage: https://gauravhchaulagain.com
-- Sitemap: https://gauravhchaulagain.com/sitemap.xml
-- Robots: https://gauravhchaulagain.com/robots.txt
-- Manifest: https://gauravhchaulagain.com/manifest.json
+- Homepage: https://www.gauravhchaulagain.com
+- Sitemap: https://www.gauravhchaulagain.com/sitemap.xml
+- Robots: https://www.gauravhchaulagain.com/robots.txt
+- Manifest: https://www.gauravhchaulagain.com/manifest.json
 
 ### Testing Tools:
 - Rich Results: https://search.google.com/test/rich-results

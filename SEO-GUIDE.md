@@ -65,7 +65,7 @@ Implemented Schema.org markup for better search engine understanding:
 
 1. **Google Search Console**
    - [ ] Add and verify your site
-   - [ ] Submit sitemap: `https://gauravhchaulagain.com/sitemap.xml`
+   - [ ] Submit sitemap: `https://www.gauravhchaulagain.com/sitemap.xml`
    - [ ] Update the Google verification code in `/app/layout.tsx` (line 81)
 
 2. **Open Graph Images**

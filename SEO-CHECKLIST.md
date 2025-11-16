@@ -15,7 +15,7 @@ Use this checklist after deploying your site to ensure everything is working cor
 ## 📤 Deployment
 
 - [ ] Deploy to production (Vercel/Netlify/etc)
-- [ ] Verify site is live at https://gauravhchaulagain.com
+- [ ] Verify site is live at https://www.gauravhchaulagain.com
 - [ ] Check all pages load correctly
 - [ ] Test navigation works
 - [ ] Verify no 404 errors
@@ -23,9 +23,9 @@ Use this checklist after deploying your site to ensure everything is working cor
 ## 🔍 Post-Deployment Testing (Day 1)
 
 ### Sitemap & Robots
-- [ ] Visit: https://gauravhchaulagain.com/sitemap.xml
+- [ ] Visit: https://www.gauravhchaulagain.com/sitemap.xml
 - [ ] Verify all pages are listed (13 total URLs)
-- [ ] Visit: https://gauravhchaulagain.com/robots.txt
+- [ ] Visit: https://www.gauravhchaulagain.com/robots.txt
 - [ ] Confirm it's accessible and correct
 
 ### Structured Data Validation
@@ -68,14 +68,14 @@ Use this checklist after deploying your site to ensure everything is working cor
 
 - [ ] Go to: https://search.google.com/search-console
 - [ ] Click "Add Property"
-- [ ] Enter: https://gauravhchaulagain.com
+- [ ] Enter: https://www.gauravhchaulagain.com
 - [ ] Choose verification method: HTML tag
 - [ ] Copy verification code
 - [ ] Add code to `/app/layout.tsx` line 81
 - [ ] Deploy changes
 - [ ] Complete verification in Search Console
 - [ ] In Search Console, go to Sitemaps
-- [ ] Submit: https://gauravhchaulagain.com/sitemap.xml
+- [ ] Submit: https://www.gauravhchaulagain.com/sitemap.xml
 - [ ] Wait for "Success" status
 
 ## 📊 Analytics Setup (Week 1)

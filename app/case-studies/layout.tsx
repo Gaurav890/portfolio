@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Case Studies - Product Management Work | Gaurav Chaulagain',
     description: 'Real product challenges, measurable impact, and lessons learned from product management work',
-    url: 'https://gauravhchaulagain.com/case-studies',
+    url: 'https://www.gauravhchaulagain.com/case-studies',
     type: 'website',
   },
   twitter: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: 'Real product challenges, measurable impact, and lessons learned from product management work',
   },
   alternates: {
-    canonical: 'https://gauravhchaulagain.com/case-studies',
+    canonical: 'https://www.gauravhchaulagain.com/case-studies',
   },
 };
 

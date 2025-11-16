@@ -7,8 +7,8 @@ export default function StructuredData() {
     name: personalInfo.name,
     jobTitle: personalInfo.title,
     description: personalInfo.tagline,
-    url: 'https://gauravhchaulagain.com',
-    image: 'https://gauravhchaulagain.com/images/gaurav_profile.png',
+    url: 'https://www.gauravhchaulagain.com',
+    image: 'https://www.gauravhchaulagain.com/images/gaurav_profile.png',
     email: personalInfo.email,
     telephone: personalInfo.phone,
     address: {

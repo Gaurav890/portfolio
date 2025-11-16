@@ -21,7 +21,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gauravhchaulagain.com'),
+  metadataBase: new URL('https://www.gauravhchaulagain.com'),
   title: {
     default: "Gaurav Chaulagain - Product Manager & AI Specialist",
     template: "%s | Gaurav Chaulagain",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gaurav Chaulagain - Product Manager & AI Specialist",
     description: "Product Manager specializing in AI products and technical product management. Building innovative solutions at the intersection of technology and user experience.",
-    url: "https://gauravhchaulagain.com",
+    url: "https://www.gauravhchaulagain.com",
     siteName: "Gaurav Chaulagain Portfolio",
     locale: "en_US",
     type: "website",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://gauravhchaulagain.com",
+    canonical: "https://www.gauravhchaulagain.com",
   },
   verification: {
     google: 'sfr-d3rwSjD8vv4xuk54oMR_qS-LMUQ0kWOA1Epv7zg',
