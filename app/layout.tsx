@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     canonical: "https://gauravhchaulagain.com",
   },
   verification: {
-    google: 'google-site-verification=sfr-d3rwSjD8vv4xuk54oMR_qS-LMUQ0kWOA1Epv7zg', // You'll need to add this from Google Search Console
+    google: 'sfr-d3rwSjD8vv4xuk54oMR_qS-LMUQ0kWOA1Epv7zg',
   },
 };
 
