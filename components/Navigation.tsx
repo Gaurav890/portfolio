@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -10,16 +10,17 @@ import { personalInfo } from '@/lib/data';
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Blog', href: 'https://medium.com/@gauravchaulagain/' },
+  { name: 'Blog', href: 'https://medium.com/@gauravchaulagain/', external: true },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Contact', href: '/#contact', isSection: true },
 ];
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +41,33 @@ export const Navigation = () => {
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === href;
+    if (href === '/#contact') return false; // Contact link is never "active"
     return pathname?.startsWith(href);
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: typeof navLinks[0]) => {
+    // Handle external links normally
+    if (link.external) {
+      return;
+    }
+
+    // Handle section links (like Contact)
+    if (link.isSection) {
+      e.preventDefault();
+      const sectionId = link.href.split('#')[1];
+
+      // If we're on the home page, just scroll
+      if (pathname === '/') {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // If we're on a different page, navigate to home with hash
+        router.push(link.href);
+      }
+      setIsMobileMenuOpen(false);
+    }
   };
 
   return (
@@ -77,6 +104,9 @@ export const Navigation = () => {
                       ? 'text-ocean-blue'
                       : 'text-deep-black hover:text-ocean-blue'
                   )}
+                  onClick={(e) => handleNavClick(e, link)}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noopener noreferrer' : undefined}
                 >
                   {link.name}
                 </Link>
@@ -124,7 +154,9 @@ export const Navigation = () => {
                       ? 'text-ocean-blue'
                       : 'text-deep-black hover:text-ocean-blue'
                   )}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link)}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noopener noreferrer' : undefined}
                 >
                   {link.name}
                 </Link>
