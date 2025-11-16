@@ -5,6 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import FloatingGameButton from "@/components/FloatingGameButton";
 import StructuredData from "@/components/StructuredData";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -97,6 +98,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body className={manrope.className} suppressHydrationWarning>
+        <GoogleAnalytics />
         <Navigation />
         {children}
         <Footer />
