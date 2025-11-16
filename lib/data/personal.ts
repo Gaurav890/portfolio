@@ -1,17 +1,15 @@
 import { SocialLink } from '../types';
 
 export const personalInfo = {
-  name: 'Gaurav Chaulagain',
-  title: 'Product Manager/Technical PM',
-  tagline: 'Building AI products that bridge strategy and execution',
-  shortBio: 'Product Manager with 3+ years shipping AI/ML products. I turn ambiguous problems into clear roadmaps, collaborate deeply with engineering, and measure what actually matters.',
-  fullBio: `Over the past 3+ years, I've built AI-powered virtual try-on platforms, scaled enterprise CMS solutions serving 100K+ businesses, and led cloud infrastructure modernization. My work has driven 100%+ traffic growth, 600%+ conversion improvements, and helped teams ship 3x faster.
-
-  Currently finishing my CS Master's at San Francisco Bay University (graduating Dec 2025). My team won 'Best Use of Claude' at Cal Hacks 12.0 for building an AI eldercare assistant. When I'm not building products, I'm mentoring students or exploring Oakland's coffee scene.`,
-  location: 'Oakland, California, USA',
-  email: 'gauravchaulagain0@gmail.com',
-  phone: '925-860-9912',
-  availability: 'Open to Product Manager and Technical PM roles',
+  "name": "Gaurav Chaulagain",
+  "title": "Product Manager",
+  "tagline": "Building AI products that turn complexity into clarity",
+  "shortBio": "AI-focused Product Manager with 3+ years of experience transforming research-level capabilities into intuitive, high-impact user experiences. I build 0→1 products, drive cross-functional execution, and measure what truly reflects value — not vanity.",
+  "fullBio": "Over the past 3+ years, I’ve built AI-powered assistants, scaled enterprise web platforms, and delivered workflow and reliability systems used across 18+ business environments. My work includes launching a 0→1 AI styling assistant in 11 weeks, improving task success by 28%, reducing workflow cycle time by 41%, and cutting deployment time by 87% through reliability automation.\n\nCurrently completing my Master’s in Computer Science (graduating Dec 2025). I received the 'Best Use of Claude' award at Cal Hacks 12.0 for building an AI-driven eldercare companion focused on reasoning, safety, and trust. Outside of work, I mentor students in product and engineering and explore Oakland’s coffee scene.",
+  "location": "Oakland, California, USA",
+  "email": "gauravchaulagain0@gmail.com",
+  "phone": "925-860-9912",
+  "availability": "Open to Product Manager, AI Product Manager, and Technical PM roles",
 };
 
 export const socialLinks: SocialLink[] = [
