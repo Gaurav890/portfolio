@@ -8,6 +8,7 @@ export interface Experience {
   description: string;
   achievements: string[];
   technologies?: string[];
+  tags?: string[];
 }
 
 // Case Study data type

@@ -5,30 +5,75 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Section, Card } from '@/components/ui';
 import { personalInfo, education } from '@/lib/data';
-import { slideUp, staggerContainer, staggerItem, viewportConfig } from '@/lib/animations';
+import { staggerContainer, staggerItem, viewportConfig } from '@/lib/animations';
 import { GraduationCap, Sparkles, Target, Network, TrendingUp, Zap, Trophy } from 'lucide-react';
 
 export const AboutSection = () => {
   const philosophies = [
     {
-      icon: <Sparkles className="w-5 h-5" />,
-      title: 'Reframe the Problem',
-      desc: 'I start by questioning assumptions. Users once told me they wanted "better images"—but the real problem was trust in AI-generated content. We solved it with transparency features, not just image quality.',
+      number: '1',
+      icon: <Sparkles className="w-6 h-6" />,
+      title: 'Start with the behavior, not the feature',
+      subtitle: 'Users rarely ask for features — they reveal patterns.',
+      principle: 'The job of a PM is to uncover the behavior underneath the request.',
+      example: {
+        intro: 'When early users struggled with the AI styling assistant, the issue wasn\'t the model.',
+        problem: 'The issue was trust.',
+        solution: 'Designing fit rationales + confidence indicators improved task success by 28% and clarified how users interpreted AI outputs.',
+      },
+      takeaway: 'Solve the behavioral root cause, and features become obvious.',
     },
     {
-      icon: <Network className="w-5 h-5" />,
-      title: 'Think in Systems',
-      desc: 'When a property investment platform had low traffic, everyone blamed content. I found the root cause: 3.2-second load times. Fixing infrastructure increased organic traffic by 100% and rankings by 85%.',
+      number: '2',
+      icon: <Network className="w-6 h-6" />,
+      title: 'Reduce complexity until the product is inevitable',
+      subtitle: 'Complex systems are easy to build.',
+      principle: 'Simple systems that feel "obvious" to users are hard.',
+      example: {
+        intro: 'A CMS workflow that spanned multiple teams took 8+ seconds to load, causing high drop-off and content bottlenecks.',
+        problem: null,
+        solution: 'By simplifying execution paths and improving performance to 2.5s, bounce rates dropped 22% and organic traffic rose 39%.',
+      },
+      takeaway: 'If users pause to think "what now?", the product isn\'t finished yet.',
     },
     {
-      icon: <Target className="w-5 h-5" />,
-      title: 'Measure What Matters',
-      desc: 'I ignore vanity metrics. On a fintech project serving 100K+ businesses, I focused on lead quality over quantity. 619% traffic growth became 617% increase in qualified conversions—not just clicks.',
+      number: '3',
+      icon: <Target className="w-6 h-6" />,
+      title: 'Measure what matters — not what is shiny',
+      subtitle: 'I avoid vanity metrics.',
+      principle: 'Instead, I focus on indicators that reflect user trust, workflow efficiency, reliability, and repeat behavior.',
+      example: {
+        intro: 'Instead of tracking "clicks," I tracked:',
+        problem: null,
+        solution: null,
+        metrics: [
+          'time to first successful task',
+          'recovery from AI misinterpretations',
+          'early-cohort retention after first 5 interactions',
+        ],
+        conclusion: 'These signals shaped the roadmap more accurately than surface-level engagement.',
+      },
+      takeaway: 'Good metrics predict behavior; great metrics change the roadmap.',
     },
     {
-      icon: <Zap className="w-5 h-5" />,
-      title: 'Ship Fast, Learn Faster',
-      desc: 'I reduced one team\'s campaign setup time by 86% through workflow optimization. Faster iterations compound—3x velocity enabled rapid experimentation and continuous learning.',
+      number: '4',
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Build fast enough to learn, slow enough to be right',
+      subtitle: 'Speed matters — but only when paired with clarity and reliability.',
+      principle: null,
+      example: {
+        intro: 'I shipped a 0→1 AI assistant MVP in 11 weeks, but paired the velocity with:',
+        problem: null,
+        solution: null,
+        metrics: [
+          'evaluation frameworks',
+          'transparent UX surfaces',
+          'automated monitoring',
+          'structured experimentation',
+        ],
+        conclusion: 'This allowed the team to learn fast without compromising quality.',
+      },
+      takeaway: 'Momentum is a feature — but reliability is the requirement.',
     },
   ];
 
@@ -81,38 +126,145 @@ export const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Product Philosophy - Critical Thinking */}
-        <motion.div variants={staggerItem} className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <h3 className="text-3xl font-bold text-slate-900 mb-3">How I Think About Products</h3>
-            <p className="text-lg text-slate-600">
-              Four principles backed by real results from my product work
+        {/* Product Philosophy - Creative Design */}
+        <motion.div variants={staggerItem} className="max-w-7xl mx-auto px-4">
+          <div className="mb-12 md:mb-20 text-center">
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">How I Think About Products</h3>
+            <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+              Four principles shaped by real outcomes from the products I've built
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {philosophies.map((principle, index) => (
-              <motion.div
-                key={index}
-                variants={slideUp}
-              >
-                <div className="p-6 bg-white border-2 border-ocean-blue/20 rounded-xl shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-ocean-blue text-white flex items-center justify-center flex-shrink-0">
-                      {principle.icon}
+          {/* Grid Layout */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 relative">
+            {philosophies.map((principle, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: index * 0.15 }}
+                    className="relative group"
+                  >
+                    {/* Floating Number Badge */}
+                    <motion.div
+                      className="absolute -top-4 -left-4 z-20"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                    >
+                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-ocean-blue via-indigo-600 to-purple-600 flex items-center justify-center shadow-2xl transform rotate-3">
+                        <span className="text-2xl md:text-3xl font-black text-white">
+                          {principle.number}
+                        </span>
+                      </div>
+                      {/* Glow effect */}
+                      <motion.div
+                        className="absolute inset-0 rounded-2xl bg-ocean-blue blur-xl opacity-40"
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.3, 0.5, 0.3],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      />
+                    </motion.div>
+
+                    {/* Main Card */}
+                    <div className="relative h-full bg-white rounded-3xl border-2 border-slate-200 p-6 md:p-8 shadow-lg hover:shadow-2xl hover:border-ocean-blue/50 transition-all duration-500 group-hover:-translate-y-2">
+                      {/* Decorative corner accent */}
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-ocean-blue/5 to-transparent rounded-bl-full rounded-tr-3xl" />
+
+                      {/* Icon and Title Side by Side */}
+                      <div className="relative flex items-start gap-4 mb-4">
+                        <div className="flex-shrink-0 p-3 md:p-4 rounded-2xl bg-gradient-to-br from-ocean-blue/10 to-indigo-600/10 border border-ocean-blue/20">
+                          <div className="text-ocean-blue">
+                            {principle.icon}
+                          </div>
+                        </div>
+                        <h4 className="text-xl md:text-2xl font-bold text-slate-900 leading-tight pt-2">
+                          {principle.title}
+                        </h4>
+                      </div>
+
+                      {/* Subtitle & Principle */}
+                      <div className="space-y-2 mb-6">
+                        <p className="text-base md:text-lg text-slate-700 font-medium">
+                          {principle.subtitle}
+                        </p>
+                        {principle.principle && (
+                          <p className="text-sm md:text-base text-slate-600 italic border-l-4 border-ocean-blue/30 pl-4 py-1">
+                            {principle.principle}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Example Section */}
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full bg-ocean-blue animate-pulse" />
+                          <p className="text-xs md:text-sm font-bold text-ocean-blue uppercase tracking-wider">
+                            Real Example
+                          </p>
+                        </div>
+
+                        <div className="space-y-3 text-sm md:text-base">
+                          <p className="text-slate-700 leading-relaxed">
+                            {principle.example.intro}
+                          </p>
+
+                          {principle.example.problem && (
+                            <div className="bg-slate-100 border-l-4 border-slate-400 p-3 rounded-r-lg">
+                              <p className="text-slate-900 font-semibold">
+                                {principle.example.problem}
+                              </p>
+                            </div>
+                          )}
+
+                          {principle.example.solution && (
+                            <div className="bg-slate-100 border-l-4 border-ocean-blue/40 p-3 rounded-r-lg">
+                              <p className="text-slate-700">
+                                {principle.example.solution}
+                              </p>
+                            </div>
+                          )}
+
+                          {principle.example.metrics && (
+                            <div className="bg-slate-100 rounded-xl p-4">
+                              <ul className="space-y-2 list-disc list-inside">
+                                {principle.example.metrics.map((metric, idx) => (
+                                  <li key={idx} className="text-slate-700 text-sm">
+                                    {metric}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {principle.example.conclusion && (
+                            <p className="text-slate-700 leading-relaxed">
+                              {principle.example.conclusion}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Key Takeaway */}
+                        <div className="mt-6 p-4 bg-gradient-to-br from-ocean-blue/5 to-indigo-600/5 rounded-2xl border-2 border-ocean-blue/20">
+                          <p className="text-xs font-semibold text-ocean-blue uppercase tracking-wide mb-2">
+                            Key Principle
+                          </p>
+                          <p className="text-sm md:text-base text-slate-900 font-semibold italic">
+                            {principle.takeaway}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-bold text-slate-900 mb-2">
-                        {principle.title}
-                      </h4>
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {principle.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                  </motion.div>
+                </React.Fragment>
+              );
+            })}
           </div>
         </motion.div>
       </motion.div>

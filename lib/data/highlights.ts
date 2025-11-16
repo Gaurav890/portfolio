@@ -48,7 +48,7 @@ export const highlights: Highlight[] = [
     organization: 'Google (Coursera)',
     date: '2024',
     description: 'Comprehensive certification covering project management fundamentals, Agile methodologies, and practical PM tools',
-    link: 'https://www.linkedin.com/in/gaurav-chaulagain/'
+    link: 'https://www.coursera.org/account/accomplishments/specialization/3TV9FO3RME2P'
   },
   {
     id: '3',
@@ -57,25 +57,25 @@ export const highlights: Highlight[] = [
     organization: 'Google Cloud',
     date: '2024',
     description: 'Certification demonstrating understanding of cloud concepts, Google Cloud products, and digital transformation',
-    link: 'https://www.linkedin.com/in/gaurav-chaulagain/'
+    link: 'https://www.credly.com/badges/073bd061-3b94-41d6-8315-d1709d244fbe/public_url'
   },
   {
     id: '4',
     type: 'certification',
-    title: 'IBM Product Manager Certificate',
-    organization: 'IBM (Coursera)',
+    title: 'AI for Product Management',
+    organization: 'Credly',
     date: '2024',
-    description: 'Professional certificate covering product lifecycle management, agile product development, and product strategy',
-    link: 'https://www.linkedin.com/in/gaurav-chaulagain/'
+    description: 'Specialized certification focused on managing AI/ML products, understanding AI capabilities, and ethical AI development',
+    link: 'https://www.credly.com/badges/8d75504d-3d37-466c-8c9a-2a4d381127f8/public_url'
   },
   {
     id: '5',
     type: 'certification',
-    title: 'AI Product Management Specialization',
-    organization: 'Duke University (Coursera)',
+    title: 'Agile Project Management',
+    organization: 'Coursera',
     date: '2024',
-    description: 'Specialized certification focused on managing AI/ML products, understanding AI capabilities, and ethical AI development',
-    link: 'https://www.linkedin.com/in/gaurav-chaulagain/'
+    description: 'Professional certificate covering agile methodologies, sprint planning, and iterative product development',
+    link: 'https://www.coursera.org/account/accomplishments/verify/KRTFCLAB9CM5'
   },
   {
     id: '6',

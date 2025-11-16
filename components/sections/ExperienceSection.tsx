@@ -48,22 +48,26 @@ export const ExperienceSection = () => {
                       variant="default"
                       padding="lg"
                       hover="lift"
-                      className="cursor-pointer group border-slate-200 hover:border-indigo-600 transition-all duration-300"
+                      className="cursor-pointer group border-slate-200 hover:border-indigo-600 transition-all duration-300 relative"
                       onClick={() => setSelectedExperience(exp)}
                     >
-                      <div className="flex items-start justify-between mb-4">
+                      {/* Click to expand indicator */}
+                      <div className="absolute top-4 right-4 flex items-center gap-2 text-xs text-slate-400 group-hover:text-indigo-600 transition-colors">
+                        <span className="hidden sm:inline font-medium">Click to expand</span>
+                        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-all" />
+                      </div>
+
+                      <div className="flex items-start justify-between mb-4 pr-24">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-2">
                             <h3 className="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                               {exp.role}
                             </h3>
-                            <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
                           </div>
                           <p className="text-lg font-semibold text-gray-text">
                             {exp.company}
                           </p>
                         </div>
-                        <Briefcase className="w-6 h-6 text-gray-400 flex-shrink-0 ml-4" />
                       </div>
 
                       <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-text">
@@ -95,22 +99,17 @@ export const ExperienceSection = () => {
                         ))}
                       </div>
 
-                      {/* Technologies */}
-                      {exp.technologies && (
+                      {/* Tags */}
+                      {exp.tags && (
                         <div className="flex flex-wrap gap-2">
-                          {exp.technologies.slice(0, 4).map((tech, idx) => (
+                          {exp.tags.map((tag, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-gray-100 text-gray-text rounded-lg text-xs font-medium"
+                              className="px-3 py-1 bg-ocean-blue/10 text-ocean-blue rounded-lg text-xs font-medium"
                             >
-                              {tech}
+                              {tag}
                             </span>
                           ))}
-                          {exp.technologies.length > 4 && (
-                            <span className="px-3 py-1 bg-gray-100 text-gray-text rounded-lg text-xs font-medium">
-                              +{exp.technologies.length - 4} more
-                            </span>
-                          )}
                         </div>
                       )}
                     </Card>
