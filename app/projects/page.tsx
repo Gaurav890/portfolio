@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Github, ExternalLink, Award, Calendar } from 'lucide-react';
 import { projects } from '@/lib/data';
 import { slideUp, staggerContainer, staggerItem, cardHover } from '@/lib/animations';
+import Head from 'next/head';
 
 export default function ProjectsPage() {
   return (

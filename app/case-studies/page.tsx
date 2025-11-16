@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, TrendingUp, Clock, Briefcase } from 'lucide-react';
 import { caseStudies } from '@/lib/data';
 import { slideUp, staggerContainer, staggerItem, cardHover } from '@/lib/animations';
+import Head from 'next/head';
 
 export default function CaseStudiesPage() {
   return (

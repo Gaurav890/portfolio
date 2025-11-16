@@ -30,6 +30,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${project.title} - ${project.subtitle} | Gaurav Chaulagain`,
     description: project.description,
     keywords: [...project.tags, 'Project', 'Portfolio'].join(', '),
+    openGraph: {
+      title: `${project.title} - ${project.subtitle}`,
+      description: project.description,
+      url: `https://gauravhchaulagain.com/projects/${slug}`,
+      type: 'article',
+      publishedTime: new Date().toISOString(),
+      authors: ['Gaurav Chaulagain'],
+      tags: project.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} - ${project.subtitle}`,
+      description: project.description,
+    },
+    alternates: {
+      canonical: `https://gauravhchaulagain.com/projects/${slug}`,
+    },
   };
 }
 
@@ -41,8 +58,29 @@ export default async function ProjectPage({ params }: Props) {
     notFound();
   }
 
+  // Structured data for project
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.title,
+    description: project.description,
+    author: {
+      '@type': 'Person',
+      name: 'Gaurav Chaulagain',
+      url: 'https://gauravhchaulagain.com',
+    },
+    dateCreated: new Date().toISOString(),
+    keywords: project.tags.join(', '),
+    ...(project.links?.github && { codeRepository: project.links.github }),
+    ...(project.links?.live && { url: project.links.live }),
+  };
+
   return (
     <main className="min-h-screen pt-32 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <article className="container-custom max-w-4xl">
         {/* Back Button */}
         <Link href="/projects" className="inline-flex items-center gap-2 text-ocean-blue hover:underline mb-8">

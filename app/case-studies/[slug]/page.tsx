@@ -30,6 +30,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${caseStudy.title} - ${caseStudy.subtitle} | Gaurav Chaulagain`,
     description: caseStudy.summary,
     keywords: [...caseStudy.tags, 'Product Management', 'Case Study'].join(', '),
+    openGraph: {
+      title: `${caseStudy.title} - ${caseStudy.subtitle}`,
+      description: caseStudy.summary,
+      url: `https://gauravhchaulagain.com/case-studies/${slug}`,
+      type: 'article',
+      publishedTime: new Date().toISOString(),
+      authors: ['Gaurav Chaulagain'],
+      tags: caseStudy.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${caseStudy.title} - ${caseStudy.subtitle}`,
+      description: caseStudy.summary,
+    },
+    alternates: {
+      canonical: `https://gauravhchaulagain.com/case-studies/${slug}`,
+    },
   };
 }
 
@@ -41,8 +58,32 @@ export default async function CaseStudyPage({ params }: Props) {
     notFound();
   }
 
+  // Structured data for case study
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: caseStudy.title,
+    description: caseStudy.summary,
+    author: {
+      '@type': 'Person',
+      name: 'Gaurav Chaulagain',
+      url: 'https://gauravhchaulagain.com',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Gaurav Chaulagain',
+    },
+    datePublished: new Date().toISOString(),
+    articleSection: 'Product Management',
+    keywords: caseStudy.tags.join(', '),
+  };
+
   return (
     <main className="min-h-screen pt-32 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <article className="container-custom max-w-4xl">
         {/* Back Button */}
         <Link href="/case-studies" className="inline-flex items-center gap-2 text-ocean-blue hover:underline mb-8">
