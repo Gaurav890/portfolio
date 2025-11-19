@@ -108,7 +108,7 @@ export const HeroSection = () => {
             <Button
               variant="secondary"
               size="lg"
-              onClick={() => window.open('/ProductManager.pdf', '_blank')}
+              onClick={() => window.open('/PM-gaurav.pdf', '_blank')}
               className="group"
             >
               <Download className="mr-2 w-5 h-5" />
