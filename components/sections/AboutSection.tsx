@@ -62,7 +62,7 @@ export const AboutSection = () => {
       subtitle: 'Speed matters — but only when paired with clarity and reliability.',
       principle: null,
       example: {
-        intro: 'I shipped a 0→1 AI assistant MVP in 11 weeks, but paired the velocity with:',
+        intro: 'I shipped a 0→1 AI assistant MVP in 16 weeks, but paired the velocity with:',
         problem: null,
         solution: null,
         metrics: [

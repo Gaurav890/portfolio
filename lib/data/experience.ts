@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     location: 'San Francisco, CA',
     description: 'Led product strategy and delivery for a 0→1 AI-powered personal styling assistant. Translated research-level model outputs into clear, trustworthy user experiences and a scalable product foundation.',
     achievements: [
-      'Shipped a fully functional MVP in 11 weeks by defining scope, prioritizing workflows, and coordinating 18 contributors (ML, mobile, design, QA)',
+      'Shipped a fully functional MVP in 16 weeks by defining scope, prioritizing workflows, and coordinating 18 contributors (ML, mobile, design, QA)',
       'Increased task success by 28% by designing transparent AI UX patterns including fit rationale, confidence indicators, and explanation surfaces',
       'Raised early-cohort engagement by 22% by refining interaction loops and onboarding flows based on usage signals from Mixpanel + GA4',
       'Reduced onboarding friction by 12% through simplified messaging and expectation-setting screens tied to model behavior',

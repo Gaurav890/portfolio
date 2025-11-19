@@ -11,7 +11,7 @@ export const caseStudies: CaseStudy[] = [
     role: 'Product Manager (Technical)',
     featured: true,
     tags: ['AI/ML', 'Trust & Transparency', 'E-commerce', 'Generative AI'],
-    summary: 'Led the development of an AI-powered virtual try-on platform, focusing on building user trust through transparency, accuracy indicators, and educational features. Delivered MVP in 11 weeks with +18% conversion improvement.',
+    summary: 'Led the development of an AI-powered virtual try-on platform, focusing on building user trust through transparency, accuracy indicators, and educational features. Delivered MVP in 16 weeks with +18% conversion improvement.',
     challenge: 'AI-generated try-on images can feel uncanny or misleading. Users hesitate to trust AI recommendations for purchase decisions. The core challenge was: How do we make users confident enough in AI-generated images to make real purchasing decisions?',
     approach: [
       'Reframed from "How do we make AI look perfect?" to "How do we make users trust imperfect AI?"',
@@ -39,7 +39,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         metric: 'MVP Delivery',
-        value: '11 weeks',
+        value: '16 weeks',
         description: 'From concept to production launch with full feature set'
       }
     ],
