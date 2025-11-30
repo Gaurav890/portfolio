@@ -3,7 +3,7 @@ import { projects } from '@/lib/data/projects';
 import { caseStudies } from '@/lib/data/case-studies';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.gauravhchaulagain.com';
+  const baseUrl = 'https://www.gauravchaulagain.com';
 
   // Main pages
   const routes = [
