@@ -68,10 +68,10 @@ export default function SpeechBubble({ isVisible, message, onDismiss }: SpeechBu
             {/* Message - Split into two lines */}
             <div className="space-y-1 pl-6 pr-2">
               <p className="text-base font-bold leading-tight">
-                Resume loaded successfully.
+                Bored of looking at my resume?
               </p>
               <p className="text-sm font-medium leading-tight text-indigo-100">
-                Click here for bonus content! 🎯
+                Play a game with AI! 🎮
               </p>
             </div>
 
