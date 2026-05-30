@@ -1,0 +1,35 @@
+{
+  "ai-fashion-trust": {
+    "outputDir": "public/images/case-studies/ai-fashion",
+    "images": {
+      "main-interface": {
+        "filename": "ai-fashion-main-interface.png",
+        "prompt": "Flat 2D mobile app screen, no phone frame, white background. AI fashion try-on app UI. Top half: a full-body fashion photo of a woman wearing a stylish outfit, clean cropped view. Bottom half: three horizontal progress bars in ocean blue showing confidence metrics, each bar mostly filled with a percentage label to the right. Below that a toggle switch between two states. A small circular info icon in the corner. Minimal sans-serif typography, generous white space, ocean blue (#0EA5E9) and white color scheme. Clean modern e-commerce UI, sharp edges, high resolution, professional product design."
+      },
+      "educational-onboarding": {
+        "filename": "ai-fashion-educational-onboarding.png",
+        "prompt": "Flat 2D mobile app onboarding screen, no phone frame, white background. Three-step explainer flow. Top: a thin step progress indicator showing step 1 of 3 highlighted in ocean blue. Middle: a clean horizontal flow diagram with three icon boxes connected by arrows — camera icon, brain/AI icon, checkmark icon — representing a simple process pipeline. Below: three rows, each with a small circle icon on the left and two lines of placeholder text on the right. Bottom: a large rounded rectangle button in ocean blue. Minimal sans-serif font, clean whitespace, ocean blue (#0EA5E9) accent color. Sharp, high resolution, professional mobile UI design."
+      },
+      "feedback-system": {
+        "filename": "ai-fashion-feedback-system.png",
+        "prompt": "Flat 2D mobile app feedback screen, no phone frame, white background. Top: small square thumbnail image of a fashion outfit. Below: a row of five stars, four filled in gold/yellow and one empty. Three rows of feedback sliders, each with a thin track and a filled portion — the slider handles are in ocean blue, positioned at varying points. Below the sliders: a rounded text input field placeholder, then a large ocean blue submit button at the bottom. Minimal sans-serif UI, clean card layout, lots of whitespace, ocean blue (#0EA5E9) and gold accent colors. Sharp, high resolution, professional mobile UI."
+      },
+      "user-research-synthesis": {
+        "filename": "ai-fashion-user-research-synthesis.png",
+        "prompt": "Digital UX research synthesis board illustration, wide landscape format, light gray background. Three vertical columns each containing four colorful sticky note rectangles with subtle drop shadows — left column in soft red/pink, center column in soft yellow, right column in soft green. Each sticky note has two short lines of text placeholder. Between the columns thin curved arrows pointing inward toward the center. In the center of the board a large rounded blue rectangle (key insight box) with two lines of bold text inside. At the bottom a row of three small white card tiles connected by arrows, representing solution features. Clean vector illustration style, Miro-like aesthetic, soft colors, organized grid layout, high resolution."
+      },
+      "feature-prioritization": {
+        "filename": "ai-fashion-feature-prioritization.png",
+        "prompt": "Product prioritization 2x2 matrix, clean flat design, white background. A large square divided into four quadrants by a bold cross. X-axis label along the bottom, Y-axis label along the left side. Top-left quadrant filled with light green background labeled in bold, top-right in light yellow, bottom-left in light gray, bottom-right in light red. Five colored dots scattered in the quadrants — three green dots in the top-left with small label tags, two yellow dots in top-right with label tags, one gray dot in bottom-left with a label tag. Small badge stickers on two of the green dots. The axes have arrow tips. Clean corporate chart aesthetic, sans-serif font, high resolution, professional product management style."
+      },
+      "product-roadmap": {
+        "filename": "ai-fashion-product-roadmap.png",
+        "prompt": "Product roadmap Gantt chart, wide landscape format, white background. Three horizontal swim lane rows separated by thin lines, each row labeled on the left with a phase name. Across the top a week-number timeline axis. In each swim lane multiple horizontal colored bars (tasks) spanning different week ranges — top lane in blue bars, middle lane in green bars, bottom lane in purple bars. Each bar has a small checkmark icon. A vertical dashed line crossing all lanes at roughly week 11, with a small star marker above it. Two diamond-shaped milestone markers on the timeline axis. Clean flat design, sans-serif typography, professional PM tool aesthetic, high resolution, sharp edges."
+      },
+      "wireframe-iterations": {
+        "filename": "ai-fashion-wireframe-iterations.png",
+        "prompt": "Design iteration comparison, three panels side by side, white background. Left panel labeled V1: rough hand-drawn sketch wireframe style, grayscale, showing a cluttered UI with many small number labels, a red X badge in the top corner, a small speech bubble below with a frustrated face icon. Center panel labeled V2: medium fidelity wireframe, cleaner, showing rows of star icons for ratings, a yellow triangle badge in the top corner, a neutral speech bubble below. Right panel labeled Final: high fidelity polished UI with colored badges in green and blue, a green checkmark badge in the top corner, a happy speech bubble below. Bold arrows pointing right between each panel. Clean design critique aesthetic, high resolution, professional UX portfolio style."
+      }
+    }
+  }
+}
