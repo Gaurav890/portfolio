@@ -42,6 +42,26 @@ export const highlights: Highlight[] = [
     link: 'https://drive.google.com/file/d/15x1IwVC3Y_SXbpcIOtkf7MUEG2vTRipb/view'
   },
   {
+    id: '11',
+    type: 'certification',
+    title: 'Claude Code in Action',
+    organization: 'Anthropic',
+    date: 'November 2025',
+    description: 'Hands-on certification covering Claude Code CLI, MCP Server integration, and agentic workflow development using Anthropic tooling.',
+    achievement: 'Credential ID: 9cfeb662sxx7',
+    link: 'https://www.linkedin.com/in/gaurav-chaulagain/'
+  },
+  {
+    id: '12',
+    type: 'certification',
+    title: 'AI Fluency for Students',
+    organization: 'Anthropic',
+    date: 'November 2025',
+    description: 'Certification demonstrating foundational and applied fluency in artificial intelligence concepts and Anthropic AI systems.',
+    achievement: 'Credential ID: t7r2ctwo6rza',
+    link: 'https://www.linkedin.com/in/gaurav-chaulagain/'
+  },
+  {
     id: '2',
     type: 'certification',
     title: 'Google Project Management Certificate',

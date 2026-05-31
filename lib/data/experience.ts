@@ -2,18 +2,33 @@ import { Experience } from '../types';
 
 export const experiences: Experience[] = [
   {
+    id: '0',
+    company: 'FleetPanda',
+    role: 'Implementation Technical Project Manager',
+    period: 'May 2026 – Present',
+    location: 'San Francisco Bay Area, CA (Hybrid)',
+    description: 'Owning end-to-end enterprise implementation across petroleum logistics accounts, deploying agentic workflows inside my own implementation process to scale quality without sacrificing per-customer depth.',
+    achievements: [
+      'Owning end-to-end implementation across 7 enterprise fuel distributor accounts representing $1.24M CARR — 2 live in production, 5 in active onboarding. Embed on-site with customers to map dispatch workflows, design tailored solutions on the FleetPanda platform, and drive adoption among dispatchers and drivers.',
+      'Deployed a multi-agent system inside my own implementation workflow — transcript extraction, customer-facing email drafts, internal CS notes, risk escalation, edit-detection learning loop, and weekly reporting — to scale engagement quality across accounts without sacrificing depth per customer.',
+      'Architecting customer-specific solutions across order management, driver app rollout, invoicing, customer portal, and accounting integrations — sequenced as a 6–8 week implementation per account with explicit adoption gates.',
+      'Driving change management inside customer organizations: stakeholder mapping from ops VP to driver, on-site driver training and ride-alongs, usability feedback loops into product, and account health monitoring (CARR, activation ETA, health score).'
+    ],
+    technologies: ['Multi-Agent Systems', 'FleetPanda Platform', 'Enterprise Implementation', 'Change Management', 'Dispatch Workflow Design'],
+    tags: ['Forward Deployed', 'Agentic Workflows', 'Enterprise Implementation', 'Petroleum Logistics', 'Change Management']
+  },
+  {
     id: '1',
     company: 'fAIshion Inc.',
-    role: 'Lead Product Manager — AI Experiences',
+    role: 'Product Manager — Fashion AI Agent',
     period: 'Jul 2025 – Oct 2025',
     location: 'San Francisco, CA',
     description: 'Led product strategy and delivery for a 0→1 AI-powered personal styling assistant. Translated research-level model outputs into clear, trustworthy user experiences and a scalable product foundation.',
     achievements: [
-      'Shipped a fully functional MVP in 16 weeks by defining scope, prioritizing workflows, and coordinating 18 contributors (ML, mobile, design, QA)',
-      'Increased task success by 28% by designing transparent AI UX patterns including fit rationale, confidence indicators, and explanation surfaces',
-      'Raised early-cohort engagement by 22% by refining interaction loops and onboarding flows based on usage signals from Mixpanel + GA4',
-      'Reduced onboarding friction by 12% through simplified messaging and expectation-setting screens tied to model behavior',
-      'Defined the architecture, usage metrics, and pricing assumptions for a retailer-facing API that demonstrated strong enterprise adoption signals'
+      'Owned the AI Stylist conversational agent inside fAIshion\'s virtual try-on platform, now live with 50K+ users and integrated across 14+ major retailers including ZARA, SSENSE, Nordstrom, Lululemon, H&M, and Farfetch.',
+      'Drove agent task success from 62% to 81% by reworking the interaction model when early iterations over-optimized for model accuracy at the cost of user trust.',
+      'Built the agent evaluation framework covering task completion, drop-off, latency, and accuracy, then ran a continuous refinement loop that lifted first-try resolution by 22% and dropped abandonment by 25%.',
+      'Took the agent from internal alpha to public launch in 18 weeks across an 18-person ML, mobile, design, and QA team, enabling pilots with enterprise fashion retailers.'
     ],
     technologies: ['Generative AI', 'Python', 'React Native', 'Mixpanel', 'GA4', 'Prompt Systems', 'Figma', 'API Design'],
     tags: ['Generative AI', 'AI UX', 'Evaluation Frameworks', 'Mixpanel', 'Mobile', 'Python']
@@ -21,35 +36,19 @@ export const experiences: Experience[] = [
   {
     id: '2',
     company: 'WP Creative',
-    role: 'Senior Product Manager — SaaS Productivity & Systems',
-    period: 'Jan 2023 – Dec 2023',
+    role: 'Senior Technical Project Manager',
+    period: 'Apr 2022 – Dec 2023',
     location: 'Remote (NSW, Australia)',
-    description: 'Led product strategy for a multi-site CMS ecosystem used by 11+ cross-functional teams. Improved data visibility, delivery speed, and operational consistency across 18 enterprise properties.',
+    description: 'Led product and technical delivery for a MarTech SaaS platform serving 18+ enterprise properties. Drove full product lifecycle from discovery through launch, building the data infrastructure and workflow systems that enabled the team to move fast and measure what mattered.',
     achievements: [
-      'Designed a drag-and-drop CMS experience that reduced campaign setup time by 41% and improved content production across marketing and ops teams',
-      'Conducted 35+ customer interviews and workflow studies, shaping roadmap priorities that drove a 39% lift in organic traffic and 14% improvement in conversion',
-      'Delivered performance improvements (8s → 2.5s load time), reducing bounce rate by 22% across high-traffic pages',
-      'Built real-time dashboards (Power BI, Metabase) enabling same-day issue detection and preventing ~$50K/month in wasted ad spend',
-      'Streamlined cross-functional execution by reducing rework by 25% and improving delivery predictability'
+      'Designed a drag-and-drop CMS experience that reduced campaign setup time by 41%, enabling marketing and ops teams to launch independently without engineering support.',
+      'Conducted 35+ customer interviews and workflow studies, shaping roadmap priorities that drove a 39% lift in organic traffic and 14% improvement in conversion across enterprise properties.',
+      'Delivered core performance improvements (8s → 2.5s load time), reducing bounce rate by 22% across high-traffic pages and directly improving SEO rankings.',
+      'Built real-time dashboards (Power BI, Metabase) enabling same-day issue detection and preventing ~$50K/month in wasted ad spend.',
+      'Introduced automated monitoring, Jira/Confluence workflow automation, and approval frameworks — reducing rework by 25% and cross-team response time from 2h to 30 min.'
     ],
     technologies: ['GA4', 'Power BI', 'Metabase', 'SQL', 'CMS Platforms', 'Jira', 'Confluence', 'Figma'],
-    tags: ['Enterprise SaaS', 'CMS', 'Analytics', 'GA4', 'Workflow Optimization']
-  },
-  {
-    id: '3',
-    company: 'WP Creative',
-    role: 'Product Manager — Workflow Intelligence',
-    period: 'Apr 2022 – Dec 2022',
-    location: 'Remote',
-    description: 'Supported cross-team workflow execution, implementing frameworks and automations that improved reliability and reduced operational friction.',
-    achievements: [
-      'Designed requirement-validation and approval frameworks reducing rework by 25% and improving delivery consistency',
-      'Introduced automated monitoring for workflow systems, reducing average response time from 2h → 0.5h',
-      'Automated Jira + Confluence workflows to reduce handoff delays and improve cross-team throughput',
-      'Strengthened execution quality by introducing templates, acceptance criteria standards, and structured sprint planning'
-    ],
-    technologies: ['Jira', 'Confluence', 'Automation Scripts', 'QA Collaboration Tools', 'Analytics'],
-    tags: ['Jira', 'Reliability', 'Workflow Systems', 'Automation', 'Confluence']
+    tags: ['Enterprise SaaS', 'MarTech', 'Analytics', 'Workflow Automation', 'CMS']
   },
   {
     id: '4',
@@ -70,16 +69,16 @@ export const experiences: Experience[] = [
   },
   {
     id: '5',
-    company: 'Hazesoft',
-    role: 'Product Management Intern',
-    period: 'May 2021 – Aug 2021',
+    company: 'Blind Women Association of Nepal',
+    role: 'Web Developer & Accessibility Coordinator',
+    period: 'Aug 2018 – Jan 2019',
     location: 'Kathmandu, Nepal',
-    description: 'Worked with engineers to document operational workflows and analyze recurring system failures, contributing to the early automation roadmap.',
+    description: 'Built and maintained a web presence for a nonprofit supporting blind women, with a focus on accessibility standards and usability for assistive technology users.',
     achievements: [
-      'Documented deployment and reliability workflows across six services, improving onboarding clarity and accelerating ramp time by 14%',
-      'Analyzed failure patterns and drafted automation backlog items that enabled a 37% reduction in manual processes in the following quarter'
+      'Developed and launched the organization\'s website with full WCAG accessibility compliance, enabling screen-reader and keyboard-only navigation.',
+      'Coordinated with staff to document content workflows and train non-technical team members on publishing and maintenance.'
     ],
-    technologies: ['Documentation Systems', 'Process Mapping', 'Confluence', 'Jira'],
-    tags: ['Documentation', 'Process Mapping', 'Early PM Experience']
+    technologies: ['HTML', 'CSS', 'JavaScript', 'WCAG Accessibility', 'Web Development'],
+    tags: ['Accessibility', 'Web Development', 'Nonprofit', 'Early Career']
   }
 ];

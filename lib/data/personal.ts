@@ -2,14 +2,14 @@ import { SocialLink } from '../types';
 
 export const personalInfo = {
   "name": "Gaurav Chaulagain",
-  "title": "Product Manager",
-  "tagline": "Building AI products that turn complexity into clarity",
-  "shortBio": "AI-focused Product Manager with 3+ years of experience transforming research-level capabilities into intuitive, high-impact user experiences. I build 0→1 products, drive cross-functional execution, and measure what truly reflects value — not vanity.",
-  "fullBio": "Over the past 3+ years, I’ve built AI-powered assistants, scaled enterprise web platforms, and delivered workflow and reliability systems used across 18+ business environments. My work includes launching a 0→1 AI styling assistant in 16 weeks, improving task success by 28%, reducing workflow cycle time by 41%, and cutting deployment time by 87% through reliability automation.\n\nCurrently completing my Master’s in Computer Science (graduating Dec 2025). I received the 'Best Use of Claude' award at Cal Hacks 12.0 for building an AI-driven eldercare companion focused on reasoning, safety, and trust. Outside of work, I mentor students in product and engineering and explore Oakland’s coffee scene.",
-  "location": "Oakland, California, USA",
+  "title": "Forward Deployed TPM",
+  "tagline": "AI Solutions & Enterprise Deployment | Agentic Workflow Strategy | Forward Deployed TPM",
+  "shortBio": "Technical Project Manager with 5+ years shipping AI products and deploying complex systems at enterprise scale. I’ve taken an AI styling agent from zero to 50K+ users across 14 major retailers, delivered MarTech infrastructure across 18 enterprise properties, and now embed on-site with enterprise customers as a Forward Deployed TPM — architecting implementations, building multi-agent workflows, and driving adoption from VP to end user.",
+  "fullBio": "I sit at the intersection of AI product, technical delivery, and customer-facing execution. My work spans the full stack of what it means to bring hard technology to production.\n\nCurrently as a Forward Deployed TPM at FleetPanda, I own end-to-end implementation for 7 enterprise fuel distributor accounts ($1.24M CARR). I embed on-site to map dispatch workflows, architect tailored solutions, and drive user adoption — and I’ve built a multi-agent system inside my own implementation workflow to scale quality without losing per-customer depth.\n\nBefore that, I was PM for the AI Stylist conversational agent at fAIshion Inc. — driving task success from 62% to 81%, building the evaluation framework, and taking the product from internal alpha to 50K+ users across ZARA, Nordstrom, H&M, Lululemon, and 10+ other major retailers in 18 weeks.\n\nAcross 5+ years I’ve also delivered MarTech SaaS for 18+ enterprise properties at WP Creative, built observability and reliability infrastructure at Hazesoft, won ‘Best Use of Claude’ at UC Berkeley’s Cal Hacks 12.0, and hold an MS in Computer Science. I build agentic workflows with MCP servers, prototype with Claude and Cursor, and mentor students in product and engineering.",
+  "location": "San Francisco Bay Area, CA",
   "email": "gauravchaulagain0@gmail.com",
   "phone": "925-860-9912",
-  "availability": "Open to Product Manager, AI Product Manager, and Technical PM roles",
+  "availability": "Open to Forward Deployed TPM, AI Solutions Engineer, and Senior Technical PM roles",
 };
 
 export const socialLinks: SocialLink[] = [
