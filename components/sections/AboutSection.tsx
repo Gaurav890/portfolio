@@ -13,67 +13,66 @@ export const AboutSection = () => {
     {
       number: '1',
       icon: <Sparkles className="w-6 h-6" />,
-      title: 'Start with the behavior, not the feature',
-      subtitle: 'Users rarely ask for features — they reveal patterns.',
-      principle: 'The job of a PM is to uncover the behavior underneath the request.',
+      title: 'Start with the behavior, not the request',
+      subtitle: 'Users and customers rarely articulate the real problem — they describe a symptom.',
+      principle: 'The job is to find the behavior underneath the ask.',
       example: {
-        intro: 'When early users struggled with the AI styling assistant, the issue wasn\'t the model.',
-        problem: 'The issue was trust.',
-        solution: 'Designing fit rationales + confidence indicators improved task success by 28% and clarified how users interpreted AI outputs.',
+        intro: 'A fuel distributor account said they needed "more driver training." The real behavior: drivers weren\'t the problem — dispatchers had only partially adopted the platform and were still calling drivers by phone instead of assigning jobs through it.',
+        problem: null,
+        solution: 'Once we focused on-site time on dispatcher confidence first — walk-throughs, live dispatch sessions, mapping their existing mental model onto the FleetPanda dashboard — driver adoption followed on its own within a week.',
       },
-      takeaway: 'Solve the behavioral root cause, and features become obvious.',
+      takeaway: 'Solve the behavioral root cause, and the right solution becomes obvious.',
     },
     {
       number: '2',
       icon: <Network className="w-6 h-6" />,
-      title: 'Reduce complexity until the product is inevitable',
-      subtitle: 'Complex systems are easy to build.',
-      principle: 'Simple systems that feel "obvious" to users are hard.',
+      title: 'Reduce complexity until the system is inevitable',
+      subtitle: 'Complex systems are easy to build. Systems that feel obvious to the people using them are hard.',
+      principle: null,
       example: {
-        intro: 'A CMS workflow that spanned multiple teams took 8+ seconds to load, causing high drop-off and content bottlenecks.',
+        intro: 'A MarTech CMS serving 18 enterprise properties took 8+ seconds to load and required engineering for every content change.',
         problem: null,
-        solution: 'By simplifying execution paths and improving performance to 2.5s, bounce rates dropped 22% and organic traffic rose 39%.',
+        solution: 'Simplifying the execution path and cutting load time to 2.5s reduced bounce rate by 22%, lifted organic traffic 39%, and gave non-technical teams full publishing independence.',
       },
-      takeaway: 'If users pause to think "what now?", the product isn\'t finished yet.',
+      takeaway: 'If someone pauses and thinks "what do I do now?" — the system isn\'t done.',
     },
     {
       number: '3',
       icon: <Target className="w-6 h-6" />,
-      title: 'Measure what matters — not what is shiny',
-      subtitle: 'I avoid vanity metrics.',
-      principle: 'Instead, I focus on indicators that reflect user trust, workflow efficiency, reliability, and repeat behavior.',
+      title: 'Measure what predicts outcomes, not what\'s easy to count',
+      subtitle: 'Vanity metrics feel good. Leading indicators change decisions.',
+      principle: 'I instrument for the signals that tell me something is working before the lagging metrics catch up.',
       example: {
-        intro: 'Instead of tracking "clicks," I tracked:',
+        intro: 'For the AI styling agent, instead of tracking clicks or sessions, I tracked:',
         problem: null,
         solution: null,
         metrics: [
-          'time to first successful task',
-          'recovery from AI misinterpretations',
-          'early-cohort retention after first 5 interactions',
+          'time to first successful task completion',
+          'recovery rate after AI misinterpretations',
+          'retention through the first 5 interactions',
         ],
-        conclusion: 'These signals shaped the roadmap more accurately than surface-level engagement.',
+        conclusion: 'These signals reshaped the roadmap twice before any aggregate conversion number changed.',
       },
-      takeaway: 'Good metrics predict behavior; great metrics change the roadmap.',
+      takeaway: 'Good metrics predict behavior. Great metrics give you time to course-correct.',
     },
     {
       number: '4',
       icon: <Zap className="w-6 h-6" />,
-      title: 'Build fast enough to learn, slow enough to be right',
-      subtitle: 'Speed matters — but only when paired with clarity and reliability.',
-      principle: null,
+      title: 'Move fast — but build gates, not guardrails',
+      subtitle: 'Speed without structure creates the illusion of progress.',
+      principle: 'I sequence work so that each phase must prove itself before unlocking the next.',
       example: {
-        intro: 'I shipped a 0→1 AI assistant MVP in 16 weeks, but paired the velocity with:',
+        intro: 'Every FleetPanda enterprise implementation runs as a 6–8 week sequence with explicit adoption gates:',
         problem: null,
         solution: null,
         metrics: [
-          'evaluation frameworks',
-          'transparent UX surfaces',
-          'automated monitoring',
-          'structured experimentation',
+          'dispatcher sign-off before driver rollout',
+          'live order flow before invoicing goes live',
+          'accounting integration only after portal adoption is confirmed',
         ],
-        conclusion: 'This allowed the team to learn fast without compromising quality.',
+        conclusion: 'This keeps velocity high while ensuring each layer is solid before the next one is built on top of it.',
       },
-      takeaway: 'Momentum is a feature — but reliability is the requirement.',
+      takeaway: 'Momentum is a feature. Adoption gates are how you protect it.',
     },
   ];
 
@@ -129,9 +128,9 @@ export const AboutSection = () => {
         {/* Product Philosophy - Creative Design */}
         <motion.div variants={staggerItem} className="max-w-7xl mx-auto px-4">
           <div className="mb-12 md:mb-20 text-center">
-            <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">How I Think About Products</h3>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">How I Think About Technical Delivery</h3>
             <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-              Four principles shaped by real outcomes from the products I've built
+              Four operating principles stress-tested across AI agents, enterprise deployments, and systems that had to work in production
             </p>
           </div>
 

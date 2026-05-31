@@ -25,23 +25,24 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    slug: 'bridgechild',
-    title: 'BridgeChild',
-    subtitle: 'Full-Stack Education Platform - Master\'s Capstone Project',
-    period: 'January 2024 - May 2024',
+    slug: 'aakha',
+    title: 'Aakha.org',
+    subtitle: 'AI-Powered Child Sponsorship Platform — Live at aakha.org',
+    period: 'Fall 2025 — MS Capstone, SFBU',
     featured: true,
-    tags: ['Education', 'Full-Stack', 'MERN Stack', 'Capstone'],
-    description: 'A comprehensive education technology platform connecting K-12 students with mentors and tutors. Includes features for scheduling, video conferencing, progress tracking, and payment processing.',
-    challenge: 'Many students struggle to find qualified mentors and tutors who can provide personalized guidance. Existing platforms lack integrated features for scheduling, communication, and progress tracking.',
-    solution: 'BridgeChild provides a unified platform where students can discover mentors, schedule sessions, conduct video calls, track progress, and process payments—all in one place. The platform includes role-based dashboards for students, mentors, and administrators.',
+    tags: ['AI Matching', 'Social Impact', 'Full-Stack', 'PostgreSQL', 'NGO Tech'],
+    description: 'Aakha.org is a live child sponsorship platform that connects sponsors, NGOs, and children through an AI-powered matching system. The platform replaces a fragmented, manual, and opaque sponsorship process with a transparent, data-driven ecosystem — where the right sponsor finds the right child, NGOs manage operations efficiently, and every stakeholder has a purpose-built interface.',
+    challenge: 'Traditional child sponsorship programs are broken in three ways: sponsors have no reliable way to find children who match their values and preferences, NGOs are buried in manual administrative work, and children and sponsors rarely maintain meaningful long-term relationships. The lack of transparency — in fund allocation, progress tracking, and communication — erodes trust on all sides.',
+    solution: 'Aakha.org solves this with a four-role platform (Sponsors, Children, NGOs, Admins) built around an AI matching engine at its core. The AI algorithm scores sponsor-child compatibility across six weighted factors: geographic proximity, age preference, education focus areas, shared interests, language compatibility, and sponsorship history. Each role gets a tailored dashboard — sponsors see AI-ranked match cards with compatibility scores, NGOs manage child profiles and approve sponsorship requests through a structured workflow, children track progress milestones, and admins oversee the full ecosystem. A moderated real-time messaging system keeps all communication safe and accountable.',
     impact: [
-      'Successfully completed as Master\'s capstone project with high marks',
-      'Implemented end-to-end features including authentication, scheduling, video calls, and payments',
-      'Designed scalable architecture to support future growth',
-      'Created intuitive user experience across multiple user roles'
+      'Built and deployed the AI matching algorithm as Backend & AI Lead — multi-factor weighted scoring across 6 dimensions with adaptive learning from user interactions and fallback handling for edge cases.',
+      'Designed a normalized PostgreSQL schema with 14+ tables covering users, child profiles, NGO profiles, sponsorships, messages, and donation records — architected for data integrity and query performance at scale.',
+      'Engineered the full REST API surface: 30+ endpoints covering auth, child management, sponsorship workflows, messaging, and the AI matching service — with JWT security, bcrypt hashing, rate limiting, and CORS.',
+      'Deployed as a live platform at aakha.org — taken from capstone project to production, serving real NGOs and sponsors.'
     ],
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'WebRTC', 'Stripe API', 'JWT'],
+    technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'AI Matching Algorithm', 'REST API', 'Tailwind CSS'],
     links: {
+      live: 'https://www.aakha.org',
       github: 'https://github.com/Gaurav890/bridgechild'
     }
   },
