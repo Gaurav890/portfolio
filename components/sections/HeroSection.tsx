@@ -91,7 +91,7 @@ export const HeroSection = () => {
             {[
               { value: '4+', label: 'Years Experience' },
               { value: '$1.5M+', label: 'Contract Value' },
-              { value: '3,300+', label: 'Builders Competed Against' },
+              { value: '6+', label: 'Agentic Projects Shipped' },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col items-center">
                 <span className="text-2xl font-bold gradient-text">{value}</span>
@@ -102,7 +102,7 @@ export const HeroSection = () => {
 
           {/* Short Bio */}
           <motion.div
-            className="body-lg max-w-2xl mx-auto space-y-4 text-left"
+            className="body-lg max-w-2xl mx-auto space-y-4 text-center"
             variants={staggerItem}
           >
             {personalInfo.shortBio.split('\n\n').map((para, i) => (
