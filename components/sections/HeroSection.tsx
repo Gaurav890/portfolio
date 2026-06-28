@@ -118,7 +118,7 @@ export const HeroSection = () => {
             <Button
               variant="primary"
               size="lg"
-              onClick={() => scrollToSection('case-studies')}
+              onClick={() => scrollToSection('projects')}
               className="group"
             >
               View My Work

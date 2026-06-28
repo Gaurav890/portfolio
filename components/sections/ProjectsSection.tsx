@@ -12,7 +12,7 @@ export const ProjectsSection = () => {
   const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
 
   return (
-    <Section className="bg-white">
+    <Section id="projects" className="bg-white">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

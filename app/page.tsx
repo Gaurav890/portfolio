@@ -30,9 +30,9 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
-      <CaseStudiesSection />
-      <EducationSection />
       <ProjectsSection />
+      <EducationSection />
+      <CaseStudiesSection />
       <HighlightsSection />
       <ContactSection />
     </main>
