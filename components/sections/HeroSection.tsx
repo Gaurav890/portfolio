@@ -83,13 +83,32 @@ export const HeroSection = () => {
             {personalInfo.tagline}
           </motion.p>
 
-          {/* Short Bio */}
-          <motion.p
-            className="body-lg max-w-2xl mx-auto"
+          {/* Stats */}
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-6 text-sm"
             variants={staggerItem}
           >
-            {personalInfo.shortBio}
-          </motion.p>
+            {[
+              { value: '4+', label: 'Years Experience' },
+              { value: '$1.5M+', label: 'Contract Value' },
+              { value: '3,300+', label: 'Builders Competed Against' },
+            ].map(({ value, label }) => (
+              <div key={label} className="flex flex-col items-center">
+                <span className="text-2xl font-bold gradient-text">{value}</span>
+                <span className="text-gray-text">{label}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Short Bio */}
+          <motion.div
+            className="body-lg max-w-2xl mx-auto space-y-4 text-left"
+            variants={staggerItem}
+          >
+            {personalInfo.shortBio.split('\n\n').map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
