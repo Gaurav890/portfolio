@@ -1,13 +1,17 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Section } from '@/components/ui';
 import { personalInfo } from '@/lib/data';
 import { staggerContainer, staggerItem, viewportConfig } from '@/lib/animations';
 
 export const AboutSection = () => {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+
   const philosophies = [
     {
       number: '01',
@@ -67,6 +71,23 @@ export const AboutSection = () => {
     },
   ];
 
+  const goTo = (index: number) => {
+    setDirection(index > current ? 1 : -1);
+    setCurrent(index);
+  };
+
+  const prev = () => {
+    setDirection(-1);
+    setCurrent((c) => (c - 1 + philosophies.length) % philosophies.length);
+  };
+
+  const next = () => {
+    setDirection(1);
+    setCurrent((c) => (c + 1) % philosophies.length);
+  };
+
+  const principle = philosophies[current];
+
   return (
     <Section className="bg-white">
       <motion.div
@@ -111,61 +132,101 @@ export const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Product Philosophy */}
-        <motion.div variants={staggerItem} className="max-w-5xl mx-auto">
-          <div className="mb-14">
+        {/* Product Philosophy Carousel */}
+        <motion.div variants={staggerItem} className="max-w-3xl mx-auto">
+          <div className="mb-10">
             <h3 className="text-3xl font-bold text-slate-900 mb-3">How I Think About Technical Delivery</h3>
-            <p className="text-lg text-slate-500 max-w-2xl">
+            <p className="text-lg text-slate-500">
               Four operating principles stress-tested across AI agents, enterprise deployments, and systems that had to work in production
             </p>
           </div>
 
-          <div className="space-y-12">
-            {philosophies.map((principle, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="grid md:grid-cols-[80px_1fr] gap-6 border-t border-slate-100 pt-10"
-              >
-                {/* Number */}
-                <div className="text-4xl font-bold text-slate-200 select-none leading-none pt-1">
-                  {principle.number}
-                </div>
-
-                {/* Content */}
-                <div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-2">{principle.title}</h4>
-                  <p className="text-slate-500 mb-5">{principle.subtitle}</p>
-
-                  <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
-                    <p>{principle.example.intro}</p>
-
-                    {principle.example.metrics && (
-                      <ul className="space-y-1 pl-4">
-                        {principle.example.metrics.map((metric, idx) => (
-                          <li key={idx} className="list-disc list-outside">{metric}</li>
-                        ))}
-                      </ul>
-                    )}
-
-                    {principle.example.solution && (
-                      <p>{principle.example.solution}</p>
-                    )}
-
-                    {principle.example.conclusion && (
-                      <p>{principle.example.conclusion}</p>
-                    )}
+          {/* Carousel */}
+          <div className="relative border-t border-slate-100 pt-10">
+            {/* Slide */}
+            <div className="overflow-hidden min-h-[320px]">
+              <AnimatePresence mode="wait" custom={direction}>
+                <motion.div
+                  key={current}
+                  custom={direction}
+                  initial={{ opacity: 0, x: direction * 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: direction * -40 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  className="grid grid-cols-[64px_1fr] gap-6"
+                >
+                  {/* Number */}
+                  <div className="text-4xl font-bold text-slate-200 select-none leading-none pt-1">
+                    {principle.number}
                   </div>
 
-                  <p className="mt-5 text-sm font-semibold text-slate-900 italic">
-                    {principle.takeaway}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  {/* Content */}
+                  <div>
+                    <h4 className="text-xl font-bold text-slate-900 mb-2">{principle.title}</h4>
+                    <p className="text-slate-500 mb-5">{principle.subtitle}</p>
+
+                    <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                      <p>{principle.example.intro}</p>
+
+                      {principle.example.metrics && (
+                        <ul className="space-y-1 pl-4">
+                          {principle.example.metrics.map((metric, idx) => (
+                            <li key={idx} className="list-disc list-outside">{metric}</li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {principle.example.solution && (
+                        <p>{principle.example.solution}</p>
+                      )}
+
+                      {principle.example.conclusion && (
+                        <p>{principle.example.conclusion}</p>
+                      )}
+                    </div>
+
+                    <p className="mt-5 text-sm font-semibold text-slate-900 italic">
+                      {principle.takeaway}
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Controls */}
+            <div className="flex items-center justify-between mt-10 pt-6 border-t border-slate-100">
+              {/* Dot indicators */}
+              <div className="flex gap-2">
+                {philosophies.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => goTo(i)}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      i === current ? 'bg-slate-900' : 'bg-slate-300'
+                    }`}
+                    aria-label={`Go to principle ${i + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Prev / Next */}
+              <div className="flex gap-2">
+                <button
+                  onClick={prev}
+                  className="p-2 rounded border border-slate-200 hover:border-slate-400 transition-colors"
+                  aria-label="Previous"
+                >
+                  <ChevronLeft className="w-4 h-4 text-slate-600" />
+                </button>
+                <button
+                  onClick={next}
+                  className="p-2 rounded border border-slate-200 hover:border-slate-400 transition-colors"
+                  aria-label="Next"
+                >
+                  <ChevronRight className="w-4 h-4 text-slate-600" />
+                </button>
+              </div>
+            </div>
           </div>
         </motion.div>
       </motion.div>
