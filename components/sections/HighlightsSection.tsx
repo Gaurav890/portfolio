@@ -24,7 +24,7 @@ export const HighlightsSection = () => {
         {/* Section Header */}
         <motion.div variants={staggerItem} className="text-center mb-20">
           <h2 className="heading-lg mb-4 text-slate-900">Achievements & Recognition</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-ocean-blue to-indigo-400 mx-auto rounded-full mb-6" />
+          <div className="w-12 h-px bg-slate-300 mx-auto mb-6" />
           <p className="text-lg text-gray-text max-w-2xl mx-auto">
             Continuous learning and community leadership
           </p>
@@ -33,8 +33,8 @@ export const HighlightsSection = () => {
         {/* Hackathons & Awards */}
         <motion.div variants={staggerItem} className="mb-20">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-ocean-blue flex items-center justify-center">
-              <Trophy className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center">
+              <Trophy className="w-5 h-5 text-slate-600" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900">Hackathons & Awards</h3>
           </div>
@@ -53,8 +53,8 @@ export const HighlightsSection = () => {
                   className="h-full border-gray-200 hover:border-deep-black transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-deep-black group-hover:text-white transition-all duration-300">
-                      <Trophy className="w-6 h-6" />
+                    <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+                      <Trophy className="w-6 h-6 text-slate-600" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xs font-semibold text-gray-text mb-1">{highlight.date}</p>
@@ -104,13 +104,10 @@ export const HighlightsSection = () => {
         {/* Certifications */}
         <motion.div variants={staggerItem} className="mb-20">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-ocean-blue flex items-center justify-center">
-              <Award className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center">
+              <Award className="w-5 h-5 text-slate-600" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900">Professional Certifications</h3>
-            <span className="ml-auto px-3 py-1 bg-gray-100 text-deep-black rounded-full text-sm font-semibold">
-              {certifications.length} Certifications
-            </span>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -127,8 +124,8 @@ export const HighlightsSection = () => {
                   className="h-full border-gray-200 hover:border-deep-black transition-all duration-300"
                 >
                   <div className="flex flex-col h-full">
-                    <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4 group-hover:bg-deep-black group-hover:text-white transition-all duration-300">
-                      <Award className="w-5 h-5" />
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
+                      <Award className="w-5 h-5 text-slate-600" />
                     </div>
 
                     <div className="flex-1">
@@ -167,8 +164,8 @@ export const HighlightsSection = () => {
         {/* Leadership */}
         <motion.div variants={staggerItem}>
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-ocean-blue flex items-center justify-center">
-              <Lightbulb className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center">
+              <Lightbulb className="w-5 h-5 text-slate-600" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900">Leadership & Community</h3>
           </div>
@@ -187,8 +184,8 @@ export const HighlightsSection = () => {
                   className="h-full border-gray-200 hover:border-deep-black transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-deep-black group-hover:text-white transition-all duration-300">
-                      <Lightbulb className="w-6 h-6" />
+                    <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+                      <Lightbulb className="w-6 h-6 text-slate-600" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xs font-semibold text-gray-text mb-1">{highlight.date}</p>

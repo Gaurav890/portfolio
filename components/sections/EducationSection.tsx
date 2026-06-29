@@ -9,7 +9,7 @@ import { slideUp, staggerContainer, staggerItem, viewportConfig } from '@/lib/an
 
 export const EducationSection = () => {
   return (
-    <Section className="bg-gradient-to-br from-soft-blue via-cream-bg to-white">
+    <Section className="bg-slate-50">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -19,7 +19,7 @@ export const EducationSection = () => {
         {/* Section Header */}
         <motion.div variants={staggerItem} className="text-center mb-16">
           <h2 className="heading-lg mb-4 text-slate-900">Education</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 mx-auto rounded-full" />
+          <div className="w-12 h-px bg-slate-300 mx-auto" />
         </motion.div>
 
         {/* Education Cards */}
@@ -35,15 +35,15 @@ export const EducationSection = () => {
                   variant="default"
                   padding="lg"
                   hover="lift"
-                  className="h-full border-slate-200 hover:border-indigo-600 transition-all duration-300 group"
+                  className="h-full border-slate-200 hover:border-slate-400 transition-colors group"
                 >
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-slate-100 group-hover:bg-indigo-600 flex items-center justify-center flex-shrink-0 transition-all duration-300">
-                      <GraduationCap className="w-7 h-7 text-slate-600 group-hover:text-white transition-colors" />
+                    <div className="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+                      <GraduationCap className="w-7 h-7 text-slate-600" />
                     </div>
                     {edu.gpa && (
                       <div className="ml-auto text-right">
-                        <div className="text-3xl font-bold text-indigo-600">{edu.gpa}</div>
+                        <div className="text-3xl font-bold text-slate-900">{edu.gpa}</div>
                         <div className="text-xs text-slate-600 font-medium">GPA</div>
                       </div>
                     )}

@@ -5,17 +5,17 @@ import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const cardVariants = cva(
-  'rounded-2xl border transition-all duration-300 overflow-hidden',
+  'rounded-lg border transition-colors duration-200 overflow-hidden',
   {
     variants: {
       variant: {
-        default: 'bg-base-white border-gray-200 shadow-sm hover:shadow-lg',
-        elevated: 'bg-base-white border-gray-200 shadow-md hover:shadow-xl',
-        bordered: 'bg-base-white border-2 border-ocean-blue/20 hover:border-ocean-blue/40 shadow-sm',
-        ghost: 'border-transparent bg-transparent hover:bg-gray-50',
-        gradient: 'bg-gradient-to-br from-ocean-blue/5 to-purple/5 border-ocean-blue/20 hover:border-ocean-blue/40',
-        glass: 'bg-white/60 backdrop-blur-xl border-white/20 shadow-xl',
-        outline: 'bg-transparent border-2 border-gray-200 hover:border-ocean-blue/40 hover:bg-white/50',
+        default: 'bg-white border-slate-200',
+        elevated: 'bg-white border-slate-200',
+        bordered: 'bg-white border-slate-200',
+        ghost: 'border-transparent bg-transparent',
+        gradient: 'bg-slate-50 border-slate-200',
+        glass: 'bg-white border-slate-200',
+        outline: 'bg-transparent border-slate-200',
       },
       padding: {
         none: '',
@@ -26,15 +26,15 @@ const cardVariants = cva(
       },
       hover: {
         none: '',
-        lift: 'hover:-translate-y-2',
-        scale: 'hover:scale-[1.02]',
-        glow: 'hover:shadow-2xl hover:shadow-ocean-blue/10',
+        lift: 'hover:border-slate-400',
+        scale: 'hover:border-slate-400',
+        glow: 'hover:border-slate-400',
       },
     },
     defaultVariants: {
       variant: 'default',
       padding: 'md',
-      hover: 'lift',
+      hover: 'none',
     },
   }
 );

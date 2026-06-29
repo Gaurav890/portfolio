@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  /* Slate & Indigo Color Palette */
   --color-base-white: #FFFFFF;
   --color-cream-bg: #F8FAFC;
 
-  /* Slate Scale - Primary Dark Colors */
   --color-slate-950: #020617;
   --color-slate-900: #0F172A;
   --color-slate-800: #1E293B;
@@ -18,36 +16,25 @@
   --color-slate-100: #F1F5F9;
   --color-slate-50: #F8FAFC;
 
-  /* Indigo Scale - Primary Accent */
-  --color-indigo-700: #3730A3;
-  --color-indigo-600: #4F46E5;
-  --color-indigo-500: #6366F1;
-  --color-indigo-400: #818CF8;
-  --color-indigo-300: #A5B4FC;
-  --color-indigo-200: #C7D2FE;
-  --color-indigo-100: #E0E7FF;
-  --color-indigo-50: #EEF2FF;
-
-  /* Legacy mappings for backward compatibility */
-  --color-ocean-blue: #4F46E5;
+  /* Legacy mappings kept for backward compat with existing components */
+  --color-ocean-blue: #0F172A;
   --color-deep-black: #0F172A;
-  --color-soft-blue: #EEF2FF;
+  --color-soft-blue: #F1F5F9;
   --color-gray-text: #475569;
   --color-light-gray: #F1F5F9;
-  --color-purple: #6366F1;
-  --color-green: #10B981;
-  --color-orange: #F59E0B;
-  --color-pink: #EC4899;
-  --color-indigo: #4F46E5;
-  --color-teal: #14B8A6;
+  --color-indigo-600: #0F172A;
+  --color-indigo-500: #334155;
+  --color-indigo-400: #475569;
+  --color-indigo-100: #F1F5F9;
+  --color-indigo-50: #F8FAFC;
+  --color-purple: #334155;
 
-  /* System colors */
-  --color-background: #F8FAFC;
+  --color-background: #FFFFFF;
   --color-foreground: #0F172A;
 }
 
 body {
-  background-color: var(--color-cream-bg);
+  background-color: #FFFFFF;
   color: var(--color-slate-900);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -60,17 +47,14 @@ html {
 }
 
 @layer components {
-  /* Container styles */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Section padding */
   .section-padding {
     @apply py-16 md:py-24 lg:py-32;
   }
 
-  /* Heading styles */
   .heading-xl {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
     font-family: var(--font-display);
@@ -91,81 +75,55 @@ html {
     font-family: var(--font-display);
   }
 
-  /* Body text */
   .body-lg {
-    @apply text-lg md:text-xl text-gray-text leading-relaxed;
+    @apply text-lg md:text-xl text-slate-600 leading-relaxed;
   }
 
   .body-md {
-    @apply text-base md:text-lg text-gray-text leading-relaxed;
+    @apply text-base md:text-lg text-slate-600 leading-relaxed;
   }
 
-  /* Link styles */
   .link-primary {
-    @apply text-ocean-blue hover:text-ocean-blue/80 transition-colors duration-200;
+    @apply text-slate-900 hover:text-slate-600 transition-colors duration-200 underline underline-offset-2;
   }
 
-  /* Button styles */
   .btn-primary {
     @apply bg-slate-900 text-white px-6 py-3 rounded-lg font-medium
-           hover:bg-slate-800 transition-all duration-200
-           shadow-sm hover:shadow-md;
+           hover:bg-slate-800 transition-colors duration-200;
     font-family: var(--font-display);
   }
 
   .btn-secondary {
-    @apply bg-transparent border-2 border-slate-900 text-slate-900 px-6 py-3
-           rounded-lg font-medium hover:bg-slate-900 hover:text-white
-           transition-all duration-200;
+    @apply bg-transparent border border-slate-300 text-slate-900 px-6 py-3
+           rounded-lg font-medium hover:border-slate-900
+           transition-colors duration-200;
     font-family: var(--font-display);
   }
 
-  /* Card styles */
   .card {
-    @apply bg-base-white rounded-xl shadow-sm hover:shadow-lg
-           transition-shadow duration-300 border border-gray-200;
+    @apply bg-white rounded-lg border border-slate-200
+           transition-colors duration-200;
   }
 
-  .card-hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
-  }
-
-  .card-gradient-border {
-    @apply relative bg-gradient-to-br from-ocean-blue/10 to-purple/10
-           backdrop-blur-sm border-2 border-transparent;
-  }
-
-  /* Gradient text */
+  /* Kept for any legacy uses — renders as plain dark text */
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent;
+    @apply text-slate-900;
   }
 
   .gradient-text-accent {
-    @apply bg-gradient-to-r from-slate-900 to-indigo-600 bg-clip-text text-transparent;
+    @apply text-slate-900;
   }
 
   .gradient-text-warm {
-    @apply bg-gradient-to-r from-indigo-500 to-indigo-300 bg-clip-text text-transparent;
+    @apply text-slate-700;
   }
 
-  /* Section Separators */
-  .section-divider {
-    @apply relative;
-  }
-
-  .section-divider::before {
-    content: '';
-    @apply absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent;
-  }
-
-  /* Glass morphism effect */
   .glass-card {
-    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+    @apply bg-white border border-slate-200;
   }
 }
 
 @layer utilities {
-  /* Custom scrollbar */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }

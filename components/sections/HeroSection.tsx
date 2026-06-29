@@ -3,9 +3,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
-import { Button, FloatingIcons } from '@/components/ui';
+import { Button } from '@/components/ui';
 import { personalInfo } from '@/lib/data';
-import { fadeIn, slideUp, staggerContainer, staggerItem } from '@/lib/animations';
+import { staggerContainer, staggerItem } from '@/lib/animations';
 
 export const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -16,68 +16,23 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-soft-blue via-cream-bg to-white -z-10" />
-
-      {/* Floating Tool Icons */}
-      <FloatingIcons />
-
-      {/* Animated circles */}
-      <motion.div
-        className="absolute top-20 right-10 w-64 h-64 bg-ocean-blue/10 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
-      <motion.div
-        className="absolute bottom-20 left-10 w-96 h-96 bg-ocean-blue/5 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 1,
-        }}
-      />
-
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white">
       <div className="container-custom">
         <motion.div
-          className="max-w-4xl mx-auto text-center space-y-8"
+          className="max-w-3xl mx-auto text-center space-y-8"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
         >
-          {/* Greeting */}
-          <motion.div variants={staggerItem}>
-            <span className="inline-block px-4 py-2 bg-ocean-blue/10 text-ocean-blue rounded-full text-sm font-medium">
-              👋 Welcome to my portfolio
-            </span>
-          </motion.div>
-
           {/* Name & Title */}
-          <motion.h1
-            className="heading-xl"
-            variants={staggerItem}
-          >
-            <span className="block">Hi, I'm</span>
-            <span className="block gradient-text mt-2">
-              {personalInfo.name}
-            </span>
+          <motion.h1 className="heading-xl text-slate-900" variants={staggerItem}>
+            <span className="block">Hi, I&apos;m</span>
+            <span className="block mt-2">{personalInfo.name}</span>
           </motion.h1>
 
           {/* Tagline */}
           <motion.p
-            className="text-xl md:text-2xl text-gray-text font-medium max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-slate-600 font-medium"
             variants={staggerItem}
           >
             {personalInfo.tagline}
@@ -85,7 +40,7 @@ export const HeroSection = () => {
 
           {/* Stats */}
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-6 text-sm"
+            className="flex flex-wrap items-center justify-center gap-10 py-2"
             variants={staggerItem}
           >
             {[
@@ -94,15 +49,15 @@ export const HeroSection = () => {
               { value: '6+', label: 'Agentic Projects Shipped' },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col items-center">
-                <span className="text-2xl font-bold gradient-text">{value}</span>
-                <span className="text-gray-text">{label}</span>
+                <span className="text-2xl font-bold text-slate-900">{value}</span>
+                <span className="text-sm text-slate-500">{label}</span>
               </div>
             ))}
           </motion.div>
 
           {/* Short Bio */}
           <motion.div
-            className="body-lg max-w-2xl mx-auto space-y-4 text-center"
+            className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto space-y-4"
             variants={staggerItem}
           >
             {personalInfo.shortBio.split('\n\n').map((para, i) => (
@@ -133,37 +88,6 @@ export const HeroSection = () => {
               <Download className="mr-2 w-5 h-5" />
               Download Resume
             </Button>
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            className="pt-12"
-            variants={fadeIn}
-            animate={{
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          >
-            <div className="flex flex-col items-center space-y-2 text-gray-text">
-              <span className="text-sm">Scroll to explore</span>
-              <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex items-start justify-center p-2">
-                <motion.div
-                  className="w-1.5 h-1.5 bg-ocean-blue rounded-full"
-                  animate={{
-                    y: [0, 12, 0],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                />
-              </div>
-            </div>
           </motion.div>
         </motion.div>
       </div>

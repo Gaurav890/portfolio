@@ -23,7 +23,7 @@ export const ExperienceSection = () => {
           {/* Section Header */}
           <motion.div variants={staggerItem} className="text-center mb-16">
             <h2 className="heading-lg mb-4 text-slate-900">Experience</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 mx-auto rounded-full" />
+            <div className="w-12 h-px bg-slate-300 mx-auto" />
           </motion.div>
 
           {/* Timeline */}
@@ -40,7 +40,7 @@ export const ExperienceSection = () => {
                   className="relative"
                 >
                   {/* Timeline Dot */}
-                  <div className="hidden md:block absolute left-[30px] w-3 h-3 bg-indigo-600 rounded-full ring-4 ring-cream-bg" />
+                  <div className="hidden md:block absolute left-[30px] w-2 h-2 bg-slate-400 rounded-full ring-4 ring-slate-50" />
 
                   {/* Experience Card */}
                   <div className="md:ml-20">
@@ -105,7 +105,7 @@ export const ExperienceSection = () => {
                           {exp.tags.map((tag, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-ocean-blue/10 text-ocean-blue rounded-lg text-xs font-medium"
+                              className="px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium"
                             >
                               {tag}
                             </span>

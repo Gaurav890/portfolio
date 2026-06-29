@@ -21,15 +21,15 @@ export const ProjectsSection = () => {
       >
         {/* Section Header */}
         <motion.div variants={staggerItem} className="text-center mb-16">
-          <h2 className="heading-lg mb-4">Featured Projects</h2>
-          <div className="w-20 h-1 bg-ocean-blue mx-auto rounded-full" />
+          <h2 className="heading-lg mb-4 text-slate-900">Featured Projects</h2>
+          <div className="w-12 h-px bg-slate-300 mx-auto" />
           <p className="body-md mt-6 max-w-2xl mx-auto">
             Personal projects showcasing my technical skills and passion for innovation
           </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {featuredProjects.map((project) => (
             <motion.div
               key={project.id}
@@ -39,85 +39,85 @@ export const ProjectsSection = () => {
             >
               <motion.div
                 variants={cardHover}
-                className="card h-full p-6 flex flex-col"
+                className="card h-full p-6 flex flex-col hover:border-slate-400 transition-colors"
               >
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 3).map((tag, idx) => (
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.slice(0, 3).map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Title & Subtitle */}
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-slate-500 font-medium mb-4">
+                  {project.subtitle}
+                </p>
+
+                {/* Description */}
+                <p className="text-slate-600 text-sm mb-4 flex-grow line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Technologies */}
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 4).map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-soft-blue text-ocean-blue rounded-full text-xs font-medium"
+                        className="text-xs px-2 py-1 bg-slate-100 text-slate-500 rounded"
                       >
-                        {tag}
+                        {tech}
                       </span>
                     ))}
-                  </div>
-
-                  {/* Title & Subtitle */}
-                  <h3 className="text-xl font-bold text-deep-black mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-ocean-blue font-medium mb-4">
-                    {project.subtitle}
-                  </p>
-
-                  {/* Description */}
-                  <p className="text-gray-text text-sm mb-4 flex-grow line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  {/* Technologies */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.slice(0, 4).map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="text-xs px-2 py-1 bg-gray-100 text-gray-text rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.technologies.length > 4 && (
-                        <span className="text-xs px-2 py-1 text-gray-text">
-                          +{project.technologies.length - 4} more
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
-                    {project.links?.github && (
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-gray-text hover:text-ocean-blue transition-colors cursor-pointer"
-                      >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </a>
+                    {project.technologies.length > 4 && (
+                      <span className="text-xs px-2 py-1 text-slate-400">
+                        +{project.technologies.length - 4} more
+                      </span>
                     )}
-                    {project.links?.live && (
-                      <a
-                        href={project.links.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-gray-text hover:text-ocean-blue transition-colors cursor-pointer"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live
-                      </a>
-                    )}
-                    <Link
-                      href={`/projects/${project.slug}`}
-                      className="ml-auto text-ocean-blue text-sm font-medium flex items-center gap-1 hover:text-ocean-blue/80 transition-colors cursor-pointer"
+                  </div>
+                </div>
+
+                {/* Links */}
+                <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
+                  {project.links?.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-sm text-slate-500 hover:text-slate-900 transition-colors"
                     >
-                      View Details
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </motion.div>
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                  )}
+                  {project.links?.live && (
+                    <a
+                      href={project.links.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-sm text-slate-500 hover:text-slate-900 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live
+                    </a>
+                  )}
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="ml-auto text-slate-900 text-sm font-medium flex items-center gap-1 hover:text-slate-600 transition-colors"
+                  >
+                    View Details
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

@@ -76,7 +76,7 @@ export const Navigation = () => {
         className={cn(
           'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
           isScrolled
-            ? 'bg-white/80 backdrop-blur-md shadow-sm'
+            ? 'bg-white border-b border-slate-100'
             : 'bg-transparent'
         )}
         initial={{ y: -100 }}
@@ -87,7 +87,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl md:text-2xl font-bold gradient-text">
+              <span className="text-xl md:text-2xl font-bold text-slate-900">
                 {personalInfo.name.split(' ')[0]}
               </span>
             </Link>
@@ -101,8 +101,8 @@ export const Navigation = () => {
                   className={cn(
                     'text-sm font-medium transition-colors duration-200',
                     isActive(link.href)
-                      ? 'text-ocean-blue'
-                      : 'text-deep-black hover:text-ocean-blue'
+                      ? 'text-slate-900'
+                      : 'text-slate-500 hover:text-slate-900'
                   )}
                   onClick={(e) => handleNavClick(e, link)}
                   target={link.external ? '_blank' : undefined}
@@ -151,8 +151,8 @@ export const Navigation = () => {
                   className={cn(
                     'text-2xl font-medium transition-colors duration-200',
                     isActive(link.href)
-                      ? 'text-ocean-blue'
-                      : 'text-deep-black hover:text-ocean-blue'
+                      ? 'text-slate-900'
+                      : 'text-slate-500 hover:text-slate-900'
                   )}
                   onClick={(e) => handleNavClick(e, link)}
                   target={link.external ? '_blank' : undefined}
