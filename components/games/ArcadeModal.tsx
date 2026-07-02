@@ -13,8 +13,8 @@ export default function ArcadeModal({ isOpen, onClose }: ArcadeModalProps) {
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title="🎮 AI Arcade"
-      className="max-w-4xl bg-gradient-to-br from-slate-900 to-slate-800 text-white border border-indigo-500/20"
+      title="AI Arcade"
+      className="max-w-4xl bg-white border border-slate-200"
     >
       <CreativeChallenge />
     </Modal>
