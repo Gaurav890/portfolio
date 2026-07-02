@@ -45,7 +45,7 @@ export const HeroSection = () => {
           >
             {[
               { value: '4+', label: 'Years Experience' },
-              { value: '$1.5M+', label: 'Contract Value' },
+              { value: '$1.7M+', label: 'Contract Value' },
               { value: '6+', label: 'Agentic Projects Shipped' },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col items-center">

@@ -36,6 +36,10 @@ export default function StructuredData() {
     ].filter(Boolean),
     knowsAbout: [
       'Product Management',
+      'Technical Project Management',
+      'LLMs',
+      'AI Agents',
+      'Agentic Systems',
       'AI Products',
       'Machine Learning',
       'Technical Product Management',
