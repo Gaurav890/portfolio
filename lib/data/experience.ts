@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     id: '0',
     company: 'FleetPanda',
-    role: 'Implementation Technical Project Manager',
+    role: 'Technical Project Manager',
     period: 'May 2026 – Present',
     location: 'San Francisco Bay Area, CA (Hybrid)',
     description: 'Owning end-to-end enterprise implementation across petroleum logistics accounts, deploying agentic workflows inside my own implementation process to scale quality without sacrificing per-customer depth.',
@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
   {
     id: '1',
     company: 'fAIshion Inc.',
-    role: 'Product Manager — Fashion AI Agent',
+    role: 'AI Product Manager — Fashion AI Agent',
     period: 'Jul 2025 – Oct 2025',
     location: 'San Francisco, CA',
     description: 'Led product strategy and delivery for a 0→1 AI-powered personal styling assistant. Translated research-level model outputs into clear, trustworthy user experiences and a scalable product foundation.',
