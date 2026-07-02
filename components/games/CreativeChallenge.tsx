@@ -15,21 +15,21 @@ const games = [
     name: "AI Tic-Tac-Toe",
     icon: Grid3x3,
     description: "Beat the AI opponent",
-    color: "from-blue-500 to-cyan-500",
+    iconBg: "bg-blue-500",
   },
   {
     id: "colormatch" as const,
     name: "Color Blast",
     icon: Palette,
     description: "Match shapes & colors fast",
-    color: "from-purple-500 to-pink-500",
+    iconBg: "bg-violet-500",
   },
   {
     id: "memory" as const,
     name: "Pattern Memory",
     icon: Brain,
     description: "Remember the sequence",
-    color: "from-green-500 to-emerald-500",
+    iconBg: "bg-emerald-500",
   },
 ];
 
@@ -38,14 +38,10 @@ export default function CreativeChallenge() {
 
   const renderGame = () => {
     switch (currentGame) {
-      case "tictactoe":
-        return <TicTacToe />;
-      case "colormatch":
-        return <ColorMatch />;
-      case "memory":
-        return <PatternMemory />;
-      default:
-        return null;
+      case "tictactoe": return <TicTacToe />;
+      case "colormatch": return <ColorMatch />;
+      case "memory": return <PatternMemory />;
+      default: return null;
     }
   };
 
@@ -54,7 +50,7 @@ export default function CreativeChallenge() {
       <div className="space-y-4">
         <button
           onClick={() => setCurrentGame("menu")}
-          className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+          className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors text-sm"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Games
@@ -66,9 +62,7 @@ export default function CreativeChallenge() {
 
   return (
     <div className="space-y-6">
-      <p className="text-slate-300 text-center">
-        Choose a game to play
-      </p>
+      <p className="text-slate-500 text-center text-sm">Choose a game to play</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {games.map((game, index) => {
@@ -76,38 +70,30 @@ export default function CreativeChallenge() {
           return (
             <motion.button
               key={game.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
+              transition={{ delay: index * 0.08 }}
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.97 }}
               onClick={() => setCurrentGame(game.id)}
-              className="group relative overflow-hidden rounded-xl p-6 bg-slate-800/50 border border-slate-700 hover:border-indigo-500/50 transition-all"
+              className="group rounded-xl p-6 bg-slate-50 border border-slate-200 hover:border-slate-400 transition-colors text-left"
             >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${game.color} opacity-0 group-hover:opacity-10 transition-opacity`}
-              />
-
-              <div className="relative z-10 text-center space-y-3">
+              <div className="text-center space-y-3">
                 <div className="flex justify-center">
-                  <div className={`p-3 rounded-lg bg-gradient-to-br ${game.color}`}>
+                  <div className={`p-3 rounded-lg ${game.iconBg}`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-white">
-                  {game.name}
-                </h3>
-                <p className="text-sm text-slate-400">{game.description}</p>
+                <h3 className="text-base font-bold text-slate-900">{game.name}</h3>
+                <p className="text-sm text-slate-500">{game.description}</p>
               </div>
             </motion.button>
           );
         })}
       </div>
 
-      <div className="text-center pt-4">
-        <p className="text-xs text-slate-500">
-          Have fun! 🎮
-        </p>
+      <div className="text-center pt-2">
+        <p className="text-xs text-slate-400">Have fun!</p>
       </div>
     </div>
   );
