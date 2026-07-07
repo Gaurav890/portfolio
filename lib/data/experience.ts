@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     location: 'San Francisco Bay Area, CA (Hybrid)',
     description: 'Owning end-to-end enterprise implementation across petroleum logistics accounts, deploying agentic workflows inside my own implementation process to scale quality without sacrificing per-customer depth.',
     achievements: [
-      'Owning end-to-end implementation across 7 enterprise fuel distributor accounts representing $1.54M CARR — 3 live in production, 5 in active onboarding. Embed on-site with customers to map dispatch workflows, design tailored solutions on the FleetPanda platform, and drive adoption among dispatchers and drivers.',
+      'Owning end-to-end implementation across 7 enterprise fuel distributor accounts representing $1.7M+ CARR — 3 live in production, 5 in active onboarding. Embed on-site with customers to map dispatch workflows, design tailored solutions on the FleetPanda platform, and drive adoption among dispatchers and drivers.',
       'Deployed a multi-agent system inside my own implementation workflow — transcript extraction, customer-facing email drafts, internal CS notes, risk escalation, edit-detection learning loop, and weekly reporting — to scale engagement quality across accounts without sacrificing depth per customer.',
       'Architecting customer-specific solutions across order management, driver app rollout, invoicing, customer portal, and accounting integrations — sequenced as a 6–8 week implementation per account with explicit adoption gates.',
       'Driving change management inside customer organizations: stakeholder mapping from ops VP to driver, on-site driver training and ride-alongs, usability feedback loops into product, and account health monitoring (CARR, activation ETA, health score).'
