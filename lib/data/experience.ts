@@ -38,7 +38,7 @@ export const experiences: Experience[] = [
     company: 'WP Creative',
     role: 'Senior Technical Project Manager',
     period: 'Apr 2022 – Dec 2023',
-    location: 'Remote (NSW, Australia)',
+    location: 'Kathmandu, Nepal',
     description: 'Led product and technical delivery for a MarTech SaaS platform serving 18+ enterprise properties. Drove full product lifecycle from discovery through launch, building the data infrastructure and workflow systems that enabled the team to move fast and measure what mattered.',
     achievements: [
       'Designed a drag-and-drop CMS experience that reduced campaign setup time by 41%, enabling marketing and ops teams to launch independently without engineering support.',

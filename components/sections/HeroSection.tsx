@@ -44,7 +44,7 @@ export const HeroSection = () => {
             variants={staggerItem}
           >
             {[
-              { value: '4+', label: 'Years Experience' },
+              { value: '3.5+', label: 'Years Experience' },
               { value: '$1.7M+', label: 'Contract Value' },
               { value: '6+', label: 'Agentic Projects Shipped' },
             ].map(({ value, label }) => (
